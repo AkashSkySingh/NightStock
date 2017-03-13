@@ -18,7 +18,7 @@
       }
     }
   },
-  slicePosts: {
+  postDetail: {
     1: {
       title: "Sample State",
       user_id: 1,

@@ -31,7 +31,7 @@ NightStock is truly a single-page, React-based web application, partly due to th
       }
     }
   },
-  slicePosts: {
+  postDetail: {
     1: {
       title: "Sample State",
       user_id: 1,
