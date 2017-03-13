@@ -72,6 +72,7 @@ NightStock is a web application inspired by 500px built using Ruby on Rails and 
 
 
 ### Bonus Features (TBD)
-- [ ] Search NightSights by location
-- [ ] Commenting functionality on Users' pictures/albums.
+- [ ] Search Posts by location
+- [ ] Commenting functionality on Users' posts.
+- [ ] Tags and tagging on posts for search.
 - [ ] Google Map containing locations of user's posts.
