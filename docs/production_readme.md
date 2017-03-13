@@ -15,23 +15,40 @@ NightStock is truly a single-page, React-based web application, partly due to th
 {
   currentUser: {
     id: 1,
-    username: "guest",
-    session_token: "login"
+    username: "guest"
   },
   posts: {
     1: {
       title: "Sample State",
-      description: "Is good to plan"
+      description: "Is good to plan",
       user_id: 1,
-      location: "San Francisco"
+      location: "San Francisco",
       tags: {
         1: {
-          id: 1
+          id: 1,
           name: "Cold"
         }
       }
     }
   },
+  slicePosts: {
+    1: {
+      title: "Sample State",
+      user_id: 1,
+      tags: {
+        1: {
+          id: 1,
+          name: "Cold"
+        }
+      }
+    }
+  },
+  userDetail: {
+    id: 1,
+    username: "Guest",
+    description: "Sample Description"
+  }
+  tagFilters: [1, 7, 14] // Used to track selected Tags for filtering of posts
 }
 ```
 
@@ -44,7 +61,7 @@ NightStock's profile page serves as a user hub. Customization is reliant on the 
 ### Post CRUD (Create/Read/Update/Delete)
 Post interaction is simplistic, yet effective. To promote user interaction, posts will allow for users to follow and comment, allowing for notification feeds. All of this is possible due to the backend database managing <tt>post description, title, user comments, follows, and other</tt> relevant information to generate each individual post modal.
 
-![image of Post](wireframes/PostShowPage.png)
+![image of Post](wireframes/PostShow.png)
 
 
 ### Home Feed & Follows
@@ -67,3 +84,4 @@ Just like 500px, I plan to introduce a commenting functionality to NightStock. I
 
 ### APIs
 - Cloudinary
+- Bonus: GoogleMapsAPI
