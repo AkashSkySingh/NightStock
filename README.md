@@ -1,10 +1,11 @@
 # NightStock
 
 [NightStock: Heroku][heroku]
-
+[NightStock: Github][github]
 [NightStock: Trello Production Board][trello]
 
 [heroku]: http://www.herokuapp.com
+[github]: https://github.com/AkashSkySingh/NightStock
 [trello]: https://trello.com/b/3U9nmBBR/full-stack-project-nightstock
 
 ## Minimum Viable Product
