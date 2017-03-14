@@ -20,15 +20,15 @@ email           | string    | not null, indexed, unique
 description     | string    | not null
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-cover_photo_url | integer   |
-user_img_url    | integer   |
+cover_photo_url | string    |
+user_img_url    | string    |
 
 ## follows
 column name | data type | details
 ------------|-----------|------------
-id    | integer | not null, primary key
+id          | integer   | not null, primary key
 followee_id | integer   | not null
-follower_id | integer | not null
+follower_id | integer   | not null
 
 ## Bonus: tags
 column name | data type | details

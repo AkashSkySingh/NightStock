@@ -1,5 +1,5 @@
 module.exports = {
-  entry: 'frontend/nsapp.jsx',
+  entry: './frontend/nsapp.jsx',
   output: {
     path: 'app/assets/javascripts',
     filename: './bundle.js'
@@ -9,12 +9,15 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node_modules)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         }
       }
     ]
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '*']
+  }
 };
