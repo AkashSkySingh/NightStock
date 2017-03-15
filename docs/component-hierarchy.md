@@ -3,6 +3,9 @@
 **AuthFormContainer**
  - AuthForm
 
+ **Greetings Container**
+ - Header/Nav Bar
+
 **Splash Container**
  - Random User Container
   + Random User Items
@@ -28,12 +31,12 @@
 
 ## Routes
 
-|Path   | Component   |
-|-------|-------------|
-| "/sign-up" | "AuthFormContainer" |
-| "/sign-in" | "AuthFormContainer" |
-| "/home" | "HomeFeedContainer" |
-| "/" | "Root" |
-| "/users/user_id" | "UserProfileContainer" |
+|Path              | Component                |
+|------------------|--------------------------|
+| "/sign-up"       | "AuthFormContainer"      |
+| "/sign-in"       | "AuthFormContainer"      |
+| "/home"          | "HomeFeedContainer"      |
+| "/"              | "Root"                   |
+| "/users/user_id" | "UserProfileContainer"   |
 | "/posts/post_id" | "PostIndexItemContainer" |
-| "/posts" | "CreatePostContainer" |
+| "/posts"         | "CreatePostContainer"    |

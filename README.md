@@ -1,8 +1,8 @@
 # NightStock
 
-[NightStock: Heroku][heroku]
-[NightStock: Github][github]
-[NightStock: Trello Production Board][trello]
+- [NightStock: Heroku][heroku]
+- [NightStock: Github][github]
+- [NightStock: Trello Production Board][trello]
 
 [heroku]: http://www.herokuapp.com
 [github]: https://github.com/AkashSkySingh/NightStock

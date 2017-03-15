@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-let x = User.new({username: "Guest", password: "asd123", description:"Hello world, I am a professional photographer", email: "guestdemo@helper.com"})
+x = User.new({username: "Guest", password: "asd123", description:"Hello world, I am a professional photographer", email: "guestdemo@helper.com"})
 
-let y = User.new({username: "Joannes Philippe", password: "qwe123", description:"Bonjour ", email: "guestdemo@helper.com"})
+y = User.new({username: "JoannesPhilippe", password: "qwe123", description:"Bonjour friends", email: "bonjour@helper.com"})
+
+x.save
+y.save

@@ -4,10 +4,10 @@
 
 column name | data type | details
 ------------|----------|----------
-id          | integer  | not null
+id          | integer  | not null, primary key
 title       | string   | not null
 description | text     | not null
-user_id     | integer  | not null
+user_id     | integer  | not null, foreign key (references users), indexed
 location    | string   | not null
 image_url   | string   | not null
 
@@ -27,18 +27,18 @@ user_img_url    | string    |
 column name | data type | details
 ------------|-----------|------------
 id          | integer   | not null, primary key
-followee_id | integer   | not null
-follower_id | integer   | not null
+followee_id | integer   | not null, foreign key (references users), indexed
+follower_id | integer   | not null, foreign key (references users), indexed
 
 ## Bonus: tags
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | string    | not null
+name        | string    | not null, unique
 
 ## Bonus: taggings
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-note_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
+post_id     | integer   | not null, foreign key (references posts), indexed, unique [tag_id]
 tag_id      | integer   | not null, foreign key (references tags), indexed
