@@ -12,7 +12,7 @@ const Root = ({ store }) => {
   const _ensureSignedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/login');
+      replace('/');
     }
   };
 
@@ -28,8 +28,6 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
-          <Route path="/sign-in" component={ SessionFormContainer } onEnter={_redirectIfSignedIn} />
-          <Route path="/sign-up" component={ SessionFormContainer } onEnter={_redirectIfSignedIn} />
         </Route>
       </Router>
     </Provider>

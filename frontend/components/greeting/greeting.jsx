@@ -2,23 +2,33 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const sessionLinks = () => (
-  <nav className="signin-signup">
-    <Link to="/sign-in" activeClassName="current">Sign In!</Link>
-    &nbsp; &nbsp; &nbsp;
-    <Link to="/sign-up" activeClassName="current">Sign up!</Link>
-  </nav>
-);
+class Greeting extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-const personalGreeting = (currentUser, signout) => (
-	<hgroup className="header-group">
-    <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-    <button className="header-button" onClick={signout}>Sign Out</button>
-	</hgroup>
-);
+  sessionLinks() {
+    return (
+      <SessionFormContainer />
+    );
+  }
 
-const Greeting = ({ currentUser, signout }) => (
-  currentUser ? personalGreeting(currentUser, signout) : sessionLinks()
-);
+  personalGreeting(currentUser, signout) {
+    return (
+      <hgroup className="header-group">
+        <h2 className="header-name">Hi, {currentUser.username}!</h2>
+        <button className="header-button" onClick={signout}>Sign Out</button>
+      </hgroup>
+    );
+  }
+
+  render(){
+    return (
+      <div>
+        {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.logout) : this.sessionLinks()}
+      </div>
+    );
+  }
+}
 
 export default Greeting;
