@@ -1,7 +1,29 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
-import ModalStyle from './modal_style';
+
+const customStyles = {
+  overlay : {
+    position          : 'fixed',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : 'rgba(0, 0, 0, 0.5)'
+  },
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : 'auto',
+    transform             : 'translate(-50%, -50%)',
+    borderRadius          : '7px',
+    color                 : 'white',
+    backgroundColor       : 'rgba(255, 255, 255, 0.07)'
+  }
+};
+
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -92,19 +114,21 @@ class SessionForm extends React.Component {
     this.props.loadDemo();
   }
 
+
 	render() {
 		return (
       <div >
 				<nav className="sign-in-sign-up">
-					<button className="sign-in-b" onClick={this.openModal.bind(this, 'sign-in')}>Sign In!</button>
+					<button className="sign-in-b" onClick={this.openModal.bind(this, 'sign-in')}>Sign-In</button>
 
-					<button className="sign-up-b" onClick={this.openModal.bind(this, 'sign-up')}>Sign up!</button>
+					<button className="sign-up-b" onClick={this.openModal.bind(this, 'sign-up')}>Sign-Up</button>
 				</nav>
 				<Modal
+
 					contentLabel="Modal"
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
-					style={ModalStyle}>
+					style={customStyles}>
 
 					Welcome back to NightStock!
 					<br/>

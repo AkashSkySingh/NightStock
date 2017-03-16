@@ -42,6 +42,7 @@ header {
   align-items: center;
   justify-content: space-between;
   max-height: 30px;
+  min-width: 400px;
   margin-top: 20px;
 }
 
@@ -77,12 +78,15 @@ div header div hgroup h2 {
 }
 
 div header div hgroup button {
-  height: 20px;
-  margin-right: 20px;
-  background-color: white;
-  border: solid 2px white;
+  height: 30px;
+  background-color: rgb(1, 1, 1);
+  border: 0;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
   transform: skewX(-20deg);
   font-family: 'Play', sans-serif;
+  color: white;
+  margin-right: 40px;
 }
 
 header {
@@ -90,17 +94,18 @@ header {
   background-size: cover;
 }
 
+
 .sign-in-sign-up button {
   height: 30px;
   background-color: rgb(1, 1, 1);
   border: 0;
   border-left: solid 1px white;
+  border-right: solid 1px white;
   transform: skewX(-20deg);
   font-family: 'Play', sans-serif;
   color: white;
 }
 
 .sign-up-b {
-  margin-right: 30px;
-  border: solid 1px white;
+  margin-right: 40px;
 }
