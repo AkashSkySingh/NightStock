@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.loadDemoUser = this.loadDemoUser.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -41,19 +42,21 @@ class SessionForm extends React.Component {
     } else {
       this.props.signup(this.state);
     }
+
+    this.props.clearErrors();
 	}
 
 	navLink() {
 		if (this.state.modalType === "sign-in") {
 			return (
         <button onClick={this.openModal.bind(this, 'sign-up')}>
-          Sign-Up!
+          Sign-Up Now!
         </button>
       );
 		} else {
 			return (
         <button onClick={this.openModal.bind(this, 'sign-in')}>
-          Sign-In!
+          Sign-In Instead!
         </button>
       );
 		}
@@ -64,10 +67,12 @@ class SessionForm extends React.Component {
       modalOpen: true,
       modalType
     });
+    this.props.clearErrors();
   }
 
   closeModal() {
     this.setState({modalOpen: false});
+    this.props.clearErrors();
   }
 
 	renderErrors() {
@@ -81,6 +86,11 @@ class SessionForm extends React.Component {
 			</ul>
 		);
 	}
+
+  loadDemoUser(e){
+    e.preventDefault();
+    this.props.loadDemo();
+  }
 
 	render() {
 		return (
@@ -98,7 +108,6 @@ class SessionForm extends React.Component {
 
 					Welcome back to NightStock!
 					<br/>
-					{this.renderErrors()}
           <form onSubmit={this.handleSubmit} >
 						{this.renderErrors()}
 						<div className="sign-form">
@@ -118,6 +127,7 @@ class SessionForm extends React.Component {
 							</label>
 							<br/>
 							<input type="submit" value="Submit" />
+              <button onClick={(e) => this.loadDemoUser(e)}>Demo</button>
 						</div>
 					</form>
           {this.navLink()}

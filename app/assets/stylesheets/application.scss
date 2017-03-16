@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "./api/sessions.scss";
+@import "./api/users.scss";
+
+body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav, #id, hgroup, .header-group,  .header-button, nav, .sign-in-sign-up, .sign-form, .sign-input {
+}
+
+header, a, nav, body, div, form, label, hgroup {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: serif;
+}
+
+body {
+  background-color: black;
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ header a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  font-style: italic;
+  color: white;
+  text-decoration: none;
+}
+
+header a img {
+  width: 80px;
+}
+
+div header div {
+  color: white;
+  padding: 20px;
+}
+
+.ReactModal__Content {
+  
+}

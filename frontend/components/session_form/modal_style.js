@@ -5,7 +5,7 @@ const ModalStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+    backgroundColor   : 'rgba(255, 255, 255, 0.1)'
   },
   content : {
     top                   : '50%',
@@ -14,7 +14,7 @@ const ModalStyle = {
     bottom                : 'auto',
     marginRight           : 'auto',
     transform             : 'translate(-50%, -50%)',
-    borderRadius          : '20px'
+    borderRadius          : '25px'
   }
 };
 
