@@ -17,6 +17,16 @@
 @import "./api/sessions.scss";
 @import "./api/users.scss";
 
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(https://iso.500px.com/wp-content/uploads/2015/02/gotham_cover-1500x1000.jpeg) #000 no-repeat center center fixed;
+
+  }
+  #bgvid {
+      display: none;
+  }
+}
+
 
 body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav, #id, hgroup, .header-group,  .header-button, nav, .sign-in-sign-up, .sign-form, .sign-input {
 }
@@ -33,6 +43,7 @@ header, a, nav, body, div, form, label, hgroup {
 
 body {
   background-color: rgb(28, 28, 28);
+  background-size: cover;
 }
 
 
@@ -84,9 +95,10 @@ div header div hgroup button {
   border-left: solid 1px white;
   border-right: solid 1px white;
   transform: skewX(-20deg);
-  font-family: 'Play', sans-serif;
+  font-family: 'Boogaloo', cursive;
   color: white;
   margin-right: 40px;
+  font-size: 14px;
 }
 
 header {
@@ -102,23 +114,65 @@ header {
   border-left: solid 1px white;
   border-right: solid 1px white;
   transform: skewX(-20deg);
-  font-family: 'Play', sans-serif;
+  font-family: 'Boogaloo', cursive;
   color: white;
+  font-size: 14px;
 }
 
 .sign-up-b {
   margin-right: 40px;
 }
 
-form ul {
+.errors-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-div h3 {
-  margin: 0px;
+.nav-button {
+  min-height: 25px;
 }
 
-div form {
-  text-align: center;
+button.sign-in-b:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+button.sign-up-b:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+button.header-button:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+h3 {
+  margin-bottom: 0;
+}
+
+.sign-form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.errors-box {
+  min-height: 45px;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(https://iso.500px.com/wp-content/uploads/2015/02/gotham_cover-1500x1000.jpeg) no-repeat;
+  background-size: cover;
 }

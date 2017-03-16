@@ -20,9 +20,14 @@ const customStyles = {
     transform             : 'translate(-50%, -50%)',
     borderRadius          : '7px',
     color                 : 'white',
-    backgroundColor       : 'rgba(255, 255, 255, 0.07)',
+    backgroundColor       : 'rgba(0, 0, 0, 0.6)',
     width                 : '225px',
-    padding               : '0px'
+    height                : '300px',
+    display               : 'flex',
+    flexDirection         : 'column',
+    textAlign             : 'center',
+    justifyContent        : 'space-between',
+    padding               : '20px',
   }
 };
 
@@ -131,13 +136,11 @@ class SessionForm extends React.Component {
 					onRequestClose={this.closeModal}
 					style={customStyles}>
 
+          <h3>
+            Welcome to NightStock!
+          </h3>
+
           <form onSubmit={this.handleSubmit} >
-            <br/>
-            <h3>
-              Welcome back to NightStock!
-            </h3>
-            <br/>
-						{this.renderErrors()}
 						<div className="sign-form">
 							<br/>
 							<label> Username:
@@ -158,7 +161,13 @@ class SessionForm extends React.Component {
               <button onClick={(e) => this.loadDemoUser(e)}>Demo</button>
 						</div>
 					</form>
-          {this.navLink()}
+          <div className="nav-button">
+            {this.navLink()}
+          </div>
+          <br />
+          <div className="errors-box">
+            {this.renderErrors()}
+          </div>
 				</Modal>
 			</div>
 		);
