@@ -17,6 +17,7 @@
 @import "./api/sessions.scss";
 @import "./api/users.scss";
 
+
 body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav, #id, hgroup, .header-group,  .header-button, nav, .sign-in-sign-up, .sign-form, .sign-input {
 }
 
@@ -28,11 +29,10 @@ header, a, nav, body, div, form, label, hgroup {
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
-  font-family: serif;
 }
 
 body {
-  background-color: black;
+  background-color: rgb(28, 28, 28);
 }
 
 
@@ -41,24 +41,66 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  max-height: 30px;
+  margin-top: 20px;
 }
 
  header a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 15px;
-  font-style: italic;
+  font-size: 12px;
   color: white;
   text-decoration: none;
   padding: 20px;
+  font-family: 'Satisfy', cursive;
 }
 
 header a img {
-  width: 80px;
+  width: 50px;
 }
 
 div header div {
   color: white;
-  padding: 20px;
+
+}
+
+div header div hgroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div header div hgroup h2 {
+  margin-right: 15px;
+  font-family: 'Satisfy', cursive;
+}
+
+div header div hgroup button {
+  height: 20px;
+  margin-right: 20px;
+  background-color: white;
+  border: solid 2px white;
+  transform: skewX(-20deg);
+  font-family: 'Play', sans-serif;
+}
+
+header {
+  background-image: url(https://www.canadacompany.ca/resources/images/nts-navbar-shadow.png);
+  background-size: cover;
+}
+
+.sign-in-sign-up button {
+  height: 30px;
+  background-color: rgb(1, 1, 1);
+  border: 0;
+  border-left: solid 1px white;
+  transform: skewX(-20deg);
+  font-family: 'Play', sans-serif;
+  color: white;
+}
+
+.sign-up-b {
+  margin-right: 30px;
+  border: solid 1px white;
 }
