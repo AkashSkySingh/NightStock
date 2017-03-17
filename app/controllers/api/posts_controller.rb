@@ -5,8 +5,6 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.find(params[:id])
-    @post.user_id = current_user.id
-    @post.image_url
 
     if @post.save
       render "api/posts/#{@post.id}"
@@ -38,6 +36,6 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :location)
+    params.require(:post).permit(:title, :description, :location, :image_url, :user_id)
   end
 end

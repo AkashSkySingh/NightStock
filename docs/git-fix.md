@@ -18,6 +18,7 @@ Run this command in the Terminal from within your repo's root directory,
   alias berdbc='bundle exec rake db:create'
   alias berdbm='bundle exec rake db:migrate'
   alias berdbr='bundle exec rake db:reset'
+  alias berdbrb='bundle exec rake db:rollback'
   alias berdbs='bundle exec rake db:setup'
   alias berdbsd='bundle exec rake db:seed'
   alias bi='bundle install'

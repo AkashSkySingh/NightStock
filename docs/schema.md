@@ -17,11 +17,11 @@ column name     | data type | details
 id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
 email           | string    |
-description     | string    | 
+description     | string    |
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 cover_photo_url | string    |
-user_img_url    | string    |
+user_image_url    | string    |
 
 ## follows
 column name | data type | details

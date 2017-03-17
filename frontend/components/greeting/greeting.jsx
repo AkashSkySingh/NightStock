@@ -27,6 +27,9 @@ class Greeting extends React.Component {
   render(){
     return (
       <div>
+        <div className="header-current-user-img">
+          {this.props.currentUser.user_image_url}
+        </div>
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.signout) : this.sessionLinks()}
       </div>
     );
