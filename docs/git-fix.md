@@ -16,6 +16,7 @@ Run this command in the Terminal from within your repo's root directory,
   alias ber='bundle exec rspec'
   alias berr='bundle exec rake routes'
   alias berdbc='bundle exec rake db:create'
+  alias berdbm='bundle exec rake db:migrate'
   alias berdbr='bundle exec rake db:reset'
   alias berdbs='bundle exec rake db:setup'
   alias berdbsd='bundle exec rake db:seed'
