@@ -28,6 +28,9 @@ const customStyles = {
     textAlign             : 'center',
     justifyContent        : 'space-between',
     padding               : '20px',
+    fontFamily            : 'Lato, san-serif',
+    border                : '2px solid rgb(204, 204, 204)',
+    boxShadow             : '0 0px 100px 60px rgba(0, 0, 0, 1)'
   }
 };
 
@@ -78,13 +81,13 @@ class SessionForm extends React.Component {
 	navLink() {
 		if (this.state.modalType === "sign-in") {
 			return (
-        <button onClick={this.openModal.bind(this, 'sign-up')}>
+        <button className="auth-form-b" onClick={this.openModal.bind(this, 'sign-up')}>
           Sign-Up Now!
         </button>
       );
 		} else {
 			return (
-        <button onClick={this.openModal.bind(this, 'sign-in')}>
+        <button className="auth-form-b" onClick={this.openModal.bind(this, 'sign-in')}>
           Sign-In Instead!
         </button>
       );
@@ -157,8 +160,8 @@ class SessionForm extends React.Component {
 									className="sign-input" />
 							</label>
 							<br/>
-							<input type="submit" value="Submit" />
-              <button onClick={(e) => this.loadDemoUser(e)}>Demo</button>
+							<input className="auth-form-b" type="submit" value="Submit" />
+              <button className="auth-form-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
 						</div>
 					</form>
           <div className="nav-button">

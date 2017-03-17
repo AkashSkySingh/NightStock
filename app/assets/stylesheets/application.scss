@@ -19,11 +19,11 @@
 
 @media screen and (max-device-width: 800px) {
   html {
-    background: url(https://iso.500px.com/wp-content/uploads/2015/02/gotham_cover-1500x1000.jpeg) #000 no-repeat center center fixed;
-
+    background: url(http://res.cloudinary.com/nightstock/image/upload/v1489772984/bxcz1zmodxunyztminxj.gif) #000 no-repeat center center fixed;
+    background-size: cover;
   }
   #bgvid {
-      display: none;
+    display: none;
   }
 }
 
@@ -44,6 +44,7 @@ header, a, nav, body, div, form, label, hgroup {
 body {
   background-color: rgb(28, 28, 28);
   background-size: cover;
+  min-width: 400px;
 }
 
 
@@ -55,6 +56,7 @@ header {
   max-height: 30px;
   min-width: 400px;
   margin-top: 20px;
+  background-color: inherit;
 }
 
  header a {
@@ -90,31 +92,28 @@ div header div hgroup h2 {
 
 div header div hgroup button {
   height: 30px;
-  background-color: rgb(1, 1, 1);
+  background-color: inherit;
   border: 0;
   border-left: solid 1px white;
   border-right: solid 1px white;
   transform: skewX(-20deg);
-  font-family: 'Boogaloo', cursive;
+  font-family: 'Lato', sans-serif;
   color: white;
   margin-right: 40px;
   font-size: 14px;
 }
 
-header {
-  background-image: url(https://www.canadacompany.ca/resources/images/nts-navbar-shadow.png);
-  background-size: cover;
-}
+
 
 
 .sign-in-sign-up button {
   height: 30px;
-  background-color: rgb(1, 1, 1);
+  background-color: inherit;
   border: 0;
   border-left: solid 1px white;
   border-right: solid 1px white;
   transform: skewX(-20deg);
-  font-family: 'Boogaloo', cursive;
+  font-family: 'Lato', sans-serif;
   color: white;
   font-size: 14px;
 }
@@ -147,6 +146,8 @@ button.header-button:hover {
 
 h3 {
   margin-bottom: 0;
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
 }
 
 .sign-form label {
@@ -158,6 +159,18 @@ h3 {
 
 .errors-box {
   min-height: 45px;
+}
+
+.auth-form-b {
+  color: white;
+  background-color: inherit;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-form-b:hover {
+  background-color: rgba(255,255,255,0.5);
 }
 
 video#bgvid {
@@ -173,6 +186,6 @@ video#bgvid {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(https://iso.500px.com/wp-content/uploads/2015/02/gotham_cover-1500x1000.jpeg) no-repeat;
+  background: url(http://res.cloudinary.com/nightstock/image/upload/v1489772984/bxcz1zmodxunyztminxj.gif) no-repeat;
   background-size: cover;
 }
