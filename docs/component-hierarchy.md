@@ -33,8 +33,8 @@
 
 |Path              | Component                |
 |------------------|--------------------------|
-| "/sign-up"       | "AuthFormContainer"      |
-| "/sign-in"       | "AuthFormContainer"      |
+| "/sign-up"       | "AuthFormContainer"      | *Removed; modal in user.
+| "/sign-in"       | "AuthFormContainer"      | *Removed; modal in user.
 | "/home"          | "HomeFeedContainer"      |
 | "/"              | "Root"                   |
 | "/users/user_id" | "UserProfileContainer"   |
