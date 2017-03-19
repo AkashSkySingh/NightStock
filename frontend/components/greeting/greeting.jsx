@@ -17,9 +17,13 @@ class Greeting extends React.Component {
 
   personalGreeting(currentUser, signout) {
     return (
-      <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.username}!</h2>
-        <button className="header-button" onClick={signout}>Sign Out</button>
+      <hgroup>
+        <a href={`api/users/${currentUser.id}`} >
+          <img className="header-current-user-img" src={this.props.currentUser.user_image_url} alt="Current User Image"/>
+          &nbsp; &nbsp; &nbsp;
+          <h2> Hi, {currentUser.username}</h2>
+        </a>
+        <button className="sign sign-right-b" onClick={signout}>Sign Out</button>
       </hgroup>
     );
   }
@@ -27,9 +31,6 @@ class Greeting extends React.Component {
   render(){
     return (
       <div>
-        <div className="header-current-user-img">
-          {this.props.currentUser.user_image_url}
-        </div>
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.signout) : this.sessionLinks()}
       </div>
     );

@@ -35,3 +35,6 @@ const Root = ({ store }) => {
 };
 
 export default Root;
+
+// <Route path="/posts/" component={ PostPage } />
+// <Route path="/users/:userId" component={ UserPage } />

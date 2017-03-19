@@ -81,13 +81,13 @@ class SessionForm extends React.Component {
 	navLink() {
 		if (this.state.modalType === "sign-in") {
 			return (
-        <button className="auth-form-b" onClick={this.openModal.bind(this, 'sign-up')}>
+        <button className="sign-form-b" onClick={this.openModal.bind(this, 'sign-up')}>
           Sign-Up Now!
         </button>
       );
 		} else {
 			return (
-        <button className="auth-form-b" onClick={this.openModal.bind(this, 'sign-in')}>
+        <button className="sign-form-b" onClick={this.openModal.bind(this, 'sign-in')}>
           Sign-In Instead!
         </button>
       );
@@ -128,10 +128,10 @@ class SessionForm extends React.Component {
 	render() {
 		return (
       <div >
-				<nav className="sign-in-sign-up">
-					<button className="sign-in-b" onClick={this.openModal.bind(this, 'sign-in')}>Sign-In</button>
+				<nav >
+					<button className="sign" onClick={this.openModal.bind(this, 'sign-in')}>Sign-In</button>
 
-					<button className="sign-up-b" onClick={this.openModal.bind(this, 'sign-up')}>Sign-Up</button>
+					<button className="sign sign-right-b" onClick={this.openModal.bind(this, 'sign-up')}>Sign-Up</button>
 				</nav>
 				<Modal
 					contentLabel="Modal"
@@ -139,7 +139,7 @@ class SessionForm extends React.Component {
 					onRequestClose={this.closeModal}
 					style={customStyles}>
 
-          <h3>
+          <h3 className="sign-form-title">
             Welcome to NightStock!
           </h3>
 
@@ -149,22 +149,20 @@ class SessionForm extends React.Component {
 							<label> Username:
 								<input type="text"
 									value={this.state.username}
-									onChange={this.update("username")}
-									className="sign-input" />
+									onChange={this.update("username")}/>
 							</label>
 							<br/>
 							<label> Password:
 								<input type="password"
 									value={this.state.password}
-									onChange={this.update("password")}
-									className="sign-input" />
+									onChange={this.update("password")}/>
 							</label>
 							<br/>
-							<input className="auth-form-b" type="submit" value="Submit" />
-              <button className="auth-form-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
+							<input className="sign-form-b" type="submit" value="Submit" />
+              <button className="sign-form-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
 						</div>
 					</form>
-          <div className="nav-button">
+          <div>
             {this.navLink()}
           </div>
           <br />
