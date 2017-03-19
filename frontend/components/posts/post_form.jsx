@@ -5,7 +5,7 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
 const CLOUDINARY_UPLOAD_PRESET = "rpedyrwz";
-const CLOUDINARY_URL = 'https://api/cloudinary.com/v1_1/nightstock';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/nightstock/image/upload';
 
 
 
@@ -49,9 +49,14 @@ class PostForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.state = this.props.post;
+    this.props.post;
     this.state = {
-      image_url: '',
+      title: "",
+      description: "",
+      image_url: "",
+      location: "",
+      user_id: this.props.post.user_id,
+      uploadCloudinaryUrl: '',
       modalOpen: false,
       modalType: "new"
     };
@@ -75,11 +80,16 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     if (this.state.modalType === 'new') {
-      this.props.createPost(this.state);
+      this.props.createPost({
+        title: this.state.title,
+        description: this.state.description,
+        image_url: this.state.uploadCloudinaryUrl,
+        location: this.state.location,
+        user_id: this.state.user_id
+      });
     } else {
-      this.props.editPost(this.state);
+      this.props.updatePost(this.state);
     }
 
   }
@@ -92,18 +102,18 @@ class PostForm extends React.Component {
   }
 
   handleImageUpload(file) {
-    let upload = request.post(CLOUDINARY_URL)
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
                         .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
                         .field('file', file);
 
     upload.end((err, response) => {
       if (err) {
-
+        console.error(err);
       }
 
       if (response.body.secure_url !== '') {
         this.setState({
-          image_url: response.body.secure_url
+          uploadCloudinaryUrl: response.body.secure_url
         });
       }
     });
@@ -121,7 +131,7 @@ class PostForm extends React.Component {
       title: "",
       description: "",
       location: "",
-      image_url: ""
+      uploadCloudinaryUrl: ""
     });
   }
 
@@ -178,8 +188,6 @@ class PostForm extends React.Component {
                   or click to select a picture!</p>
               </Dropzone>
               <br/>
-
-              <input type="hidden" value={this.state.image_url} />
 
               <input className="post-form-b" type="submit" value={text} />
             <button className="post-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>

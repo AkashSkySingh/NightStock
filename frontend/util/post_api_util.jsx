@@ -1,5 +1,4 @@
 export const fetchPost = id => {
-
   return $.ajax({
     type: 'GET',
     url: `api/posts/${id}`
@@ -22,13 +21,13 @@ export const updatePost = post => (
   })
 );
 
-export const createPost = post => (
-  $.ajax({
+export const createPost = post => {
+  return $.ajax({
     type: 'POST',
     url:`api/posts`,
     data: { post }
-  })
-);
+  });
+};
 
 export const deletePost = id => (
   $.ajax({

@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import PostIndexContainer from './posts/post_index_container';
 import PostShowContainer from './posts/post_show_container';
+import SplashContainer from './splash_page/splash_container';
 
 const Root = ({ store }) => {
 
@@ -29,7 +30,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
-          <IndexRoute component={PostIndexContainer} />
+          <IndexRoute component={SplashContainer} />
           <Route path="/posts" component={PostIndexContainer} />
         </Route>
       </Router>

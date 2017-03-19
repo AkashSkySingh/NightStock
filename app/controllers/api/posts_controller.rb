@@ -8,8 +8,7 @@ class Api::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.find(params[:id])
-    @post.user_id = current_user.id
+    @post = Post.new(post_params)
     if @post.save
       render :show
     else
@@ -18,8 +17,7 @@ class Api::PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params)
-
+    @post = Post.find(params[:id])
     if @post.update(post_params)
       render :show
     else
@@ -40,6 +38,6 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :location, :image_url)
+    params.require(:post).permit(:title, :description, :location, :image_url, :user_id)
   end
 end

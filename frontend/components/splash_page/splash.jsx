@@ -23,14 +23,13 @@ class Splash extends React.Component {
 
   masonry_cont () {
     return (
-      <div>
-        <h1>Masonry container goes here!</h1>
+      <div className="Middle">
+        <h1 className="Splash-Text">Masonry container goes here!</h1>
       </div>
     );
   }
 
   render () {
-
     return(
       <div>
         {this.props.currentUser ? this.masonry_cont() : this.center() }

@@ -5,10 +5,12 @@ export const RECEIVE_ALL_POSTS = "RECEIVE_ALL_POSTS";
 export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 
-export const receivePost = (post) => ({
-  type: RECEIVE_POST,
-  post
-});
+export const receivePost = (post) => {
+  return ({
+    type: RECEIVE_POST,
+    post
+  });
+};
 
 export const receiveAllPosts = posts => ({
   type: RECEIVE_ALL_POSTS,

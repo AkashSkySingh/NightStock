@@ -2,8 +2,6 @@ import React from 'react';
 
 import GreetingContainer from './greeting/greeting_container';
 
-import Splash from './splash_page/splash';
-
 const App = ({ children }) => (
   <div>
     <video playsInline autoPlay muted loop poster="http://res.cloudinary.com/nightstock/image/upload/v1489772984/bxcz1zmodxunyztminxj.gif" id="bgvid">
@@ -17,7 +15,6 @@ const App = ({ children }) => (
       <GreetingContainer />
     </header>
     <div className="Center">
-      <Splash />
       { children }
     </div>
   </div>
