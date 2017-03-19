@@ -91,7 +91,7 @@ class PostForm extends React.Component {
     } else {
       this.props.updatePost(this.state);
     }
-
+    this.closeModal();
   }
 
   onImageDrop(files) {

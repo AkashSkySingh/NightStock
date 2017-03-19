@@ -32,6 +32,6 @@ export const createPost = post => {
 export const deletePost = id => (
   $.ajax({
     type: 'DELETE',
-    url: `api/post/${id}`
+    url: `api/posts/${id}`
   })
 );

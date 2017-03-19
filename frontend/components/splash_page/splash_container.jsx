@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import Splash from './splash';
 
-const mapStateToProps = (props) => {
+const mapStateToProps = (state) => {
   return ({
-    currentUser: props.session.currentUser
+    currentUser: state.session.currentUser
   });
 };
 

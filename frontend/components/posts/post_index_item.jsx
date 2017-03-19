@@ -3,7 +3,7 @@ import { Link, hashHistory } from 'react-router';
 
 const editLink = id => e => {
     e.preventDefault();
-    const url = `/posts/${id}/edit`;
+    const url = `api/posts/${id}/edit`;
     hashHistory.push(url);
 };
 

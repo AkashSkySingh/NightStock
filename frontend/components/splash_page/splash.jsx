@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import MGalleryContainer from '../masonry/masonry_container';
+
 class Splash extends React.Component {
   constructor(props){
     super(props);
@@ -25,6 +27,7 @@ class Splash extends React.Component {
     return (
       <div className="Middle">
         <h1 className="Splash-Text">Masonry container goes here!</h1>
+
       </div>
     );
   }
