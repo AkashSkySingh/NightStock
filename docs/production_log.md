@@ -23,8 +23,8 @@ Began phase 2 generation of posts, relevant routes, and necessary database imple
 #### Day 4:
 - Remember to check the 422 status codes on the PostsController and see if they register to appropriate locations.
 - Remember to check out Masonry as a potential index component for Profile/Splash/HomeFeed page.
-- Use json with associations to do the population of user information.
-- 
+
+Came to understanding that post CRUD development requires either splash page or user page implemented to test post generation and edit. Splash page container and layout ready for Masonry introduction. Adequate seeding accomplished.
 
 ### Phase 3: User Profile Page (2 Days, W2 T)
 **Objective:** User profile page displays all of user's posts and user's details.

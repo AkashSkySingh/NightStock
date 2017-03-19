@@ -8,6 +8,9 @@ import configureStore from './store/store';
 // Root component with all provided routes
 import Root from './components/root';
 
+// Items testing on window
+import * as PostAPIUtil from './util/post_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,5 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={ store }/>, root);
 
   window.store = store;
-
 });

@@ -1,13 +1,17 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post
+    @posts = Post.all
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   def create
     @post = Post.find(params[:id])
-
+    @post.user_id = current_user.id
     if @post.save
-      render "api/posts/#{@post.id}"
+      render :show
     else
       render json: @post.errors.full_messages, status: 422
     end
@@ -36,6 +40,6 @@ class Api::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :location, :image_url, :user_id)
+    params.require(:post).permit(:title, :description, :location, :image_url)
   end
 end

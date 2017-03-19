@@ -2,7 +2,7 @@ import React from 'react';
 
 import GreetingContainer from './greeting/greeting_container';
 
-import SessionForm from './session_form/session_form';
+import Splash from './splash_page/splash';
 
 const App = ({ children }) => (
   <div>
@@ -17,14 +17,7 @@ const App = ({ children }) => (
       <GreetingContainer />
     </header>
     <div className="Center">
-      <div className="Middle">
-        <h1 className="Splash-Text">
-          A look into night life from around the world.
-        </h1>
-        <h3 className="Splash-Text">
-          Come see what night elsewhere is like.
-        </h3>
-      </div>
+      <Splash />
       { children }
     </div>
   </div>
