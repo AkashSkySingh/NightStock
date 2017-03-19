@@ -60,12 +60,6 @@ class SessionForm extends React.Component {
 		}
 	}
 
-	update(field) {
-		return e => this.setState({
-			[field]: e.target.value
-		});
-	}
-
 	handleSubmit(e) {
 		e.preventDefault();
 
@@ -78,16 +72,22 @@ class SessionForm extends React.Component {
     this.props.clearErrors();
 	}
 
+  update(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
+  }
+
 	navLink() {
 		if (this.state.modalType === "sign-in") {
 			return (
-        <button className="sign-form-b" onClick={this.openModal.bind(this, 'sign-up')}>
+        <button className="sign-form-b navLink" onClick={this.openModal.bind(this, 'sign-up')}>
           Sign-Up Now!
         </button>
       );
 		} else {
 			return (
-        <button className="sign-form-b" onClick={this.openModal.bind(this, 'sign-in')}>
+        <button className="sign-form-b navLink" onClick={this.openModal.bind(this, 'sign-in')}>
           Sign-In Instead!
         </button>
       );
@@ -103,7 +103,11 @@ class SessionForm extends React.Component {
   }
 
   closeModal() {
-    this.setState({modalOpen: false});
+    this.setState({
+      modalOpen: false,
+      username: "",
+      password: ""
+    });
     this.props.clearErrors();
   }
 
@@ -145,30 +149,36 @@ class SessionForm extends React.Component {
 
           <form onSubmit={this.handleSubmit} >
 						<div className="sign-form">
-							<br/>
+							<br />
+
 							<label> Username:
 								<input type="text"
 									value={this.state.username}
 									onChange={this.update("username")}/>
 							</label>
 							<br/>
+
 							<label> Password:
 								<input type="password"
 									value={this.state.password}
 									onChange={this.update("password")}/>
 							</label>
 							<br/>
+
 							<input className="sign-form-b" type="submit" value="Submit" />
               <button className="sign-form-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
 						</div>
 					</form>
+
           <div>
             {this.navLink()}
           </div>
+
           <br />
           <div className="errors-box">
             {this.renderErrors()}
           </div>
+
 				</Modal>
 			</div>
 		);

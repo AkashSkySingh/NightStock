@@ -4,9 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // Components
 import App from './app';
-import SessionFormContainer from './session_form/session_form_container';
 import PostIndexContainer from './posts/post_index_container';
-import PostFormContainer from './posts/post_form_container';
 import PostShowContainer from './posts/post_show_container';
 
 const Root = ({ store }) => {
@@ -33,8 +31,6 @@ const Root = ({ store }) => {
         <Route path="/" component={ App } >
           <IndexRoute component={PostIndexContainer} />
           <Route path="/posts" component={PostIndexContainer} />
-          <Route path="/posts/:postId" component={PostShowContainer} />
-          <Route path="/posts/:postId/edit" component={PostFormContainer} />
         </Route>
       </Router>
     </Provider>

@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import SessionFormContainer from '../session_form/session_form_container';
+import PostFormContainer from '../posts/post_form_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Greeting extends React.Component {
           &nbsp; &nbsp; &nbsp;
           <h2> Hi, {currentUser.username}</h2>
         </a>
+        <PostFormContainer />
         <button className="sign sign-right-b" onClick={signout}>Sign Out</button>
       </hgroup>
     );

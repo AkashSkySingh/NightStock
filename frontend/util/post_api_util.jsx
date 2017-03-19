@@ -1,5 +1,5 @@
 export const fetchPost = id => {
-  debugger;
+
   return $.ajax({
     type: 'GET',
     url: `api/posts/${id}`

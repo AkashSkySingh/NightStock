@@ -7,15 +7,15 @@ const mapStateToProps = (state, ownProps) => {
   if(ownProps.params) {
     post = state.posts[ownProps.params.postId];
   }
-  let formType = ownProps.formType || "edit";
+  let formType = ownProps.formType || "new";
   return { post, formType };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const action = ownProps.formType === "new" ? createPost : updatePost;
   return {
     fetchPost: id => dispatch(fetchPost(id)),
-    action: post => dispatch(action(post))
+    updatePost: post => dispatch(updatePost(post)),
+    createPost: post => dispatch(createPost(post))
   };
 };
 
