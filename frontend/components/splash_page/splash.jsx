@@ -9,7 +9,7 @@ class Splash extends React.Component {
   }
 
 
-  center (){
+  centerNonSignedIn (){
     return (
       <div className="Middle">
         <h1 className="Splash-Text">
@@ -18,6 +18,18 @@ class Splash extends React.Component {
         <h3 className="Splash-Text">
           Come see what night elsewhere is like.
         </h3>
+        {this.masonry_cont()}
+      </div>
+    );
+  }
+
+
+  centerSignedIn (){
+    return (
+      <div className="Middle">
+        <h1 className="Splash-Text">
+          User information goes here!
+        </h1>
         {this.masonry_cont()}
       </div>
     );
@@ -35,7 +47,7 @@ class Splash extends React.Component {
   render () {
     return(
       <div>
-        {this.props.currentUser ? this.masonry_cont() : this.center() }
+        {this.props.currentUser ? this.centerSignedIn() : this.centerNonSignedIn() }
       </div>
     );
   }

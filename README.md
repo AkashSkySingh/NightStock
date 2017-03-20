@@ -12,11 +12,11 @@
 NightStock is a web application inspired by 500px built using Ruby on Rails and React/Redux. This app will, at a minimum, satisfy the following criteria with smooth, user-friendly navigation, and adequate seed data to create a memorable visit:
 
 - [ ] [Production README](docs/production_readme.md)
-- [ ] [Hosting on Heroku][heroku]
-- [ ] New account creation, login, and guest/demo login
+- [x] [Hosting on Heroku][heroku]
+- [x] New account creation, login, and guest/demo login
 - [ ] Post Pictures
-  - [ ] Integrate Cloudinary for uploading
-  - [ ] Photo detail page has description and poster information
+  - [x] Integrate Cloudinary for uploading
+  - [ ] Photo detail page has user info 
   - [ ] Ability to edit description
 - [ ] Follows
   - [ ] Users can follow and be followed by other users
@@ -26,7 +26,6 @@ NightStock is a web application inspired by 500px built using Ruby on Rails and 
   - [ ] Clicking on poster renders the poster's profile page
   - [ ] Clicking on photo brings up Photo detail page
 - [ ] Profile Page
-  - [ ] Profile edit possible
   - [ ] Has profile picture and description
   - [ ] Index of all user photos
   - [ ] List of followers
