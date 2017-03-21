@@ -17,7 +17,7 @@ class Splash extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSplashPosts();
+    this.props.fetchPosts();
   }
 
   centerNonSignedIn (){
@@ -31,7 +31,7 @@ class Splash extends React.Component {
             Come see what night elsewhere is like.
           </h3>
         </div>
-        {this.splashMasonry()}
+
       </div>
     );
   }
@@ -39,15 +39,19 @@ class Splash extends React.Component {
   centerSignedIn (){
     return (
       <div className="Middle">
-        <div className="Wrap" >
-          <h1 className="User-UN">
-            {this.props.currentUser.username}
-          </h1>
-          <h3 className="User-Desc">
-            {this.props.currentUser.description}
-          </h3>
-          <img className="User-CP" src={this.props.currentUser.cover_photo_url} />
-          <img className="User-UP" src={this.props.currentUser.user_image_url} />
+        <div className="User" >
+          <div className="User-imgs">
+            <img className="User-CP" src={this.props.currentUser.cover_photo_url} />
+            <img className="User-UP" src={this.props.currentUser.user_image_url} />
+          </div>
+          <div className="User-texts" >
+            <h1 className="User-UN">
+              {this.props.currentUser.username}
+            </h1>
+            <h3 className="User-Desc">
+              {this.props.currentUser.description}
+            </h3>
+          </div>
         </div>
         <PostIndexContainer />
       </div>
@@ -55,8 +59,6 @@ class Splash extends React.Component {
   }
 
   splashMasonry() {
-    debugger;
-
     let childElements = this.props.posts.map( (post) => {
       return (
         <li className="masonry-post" key={post.id} >
@@ -77,7 +79,6 @@ class Splash extends React.Component {
   }
 
   render () {
-    debugger;
     return(
       <div>
         {this.props.currentUser ? this.centerSignedIn() : this.centerNonSignedIn() }

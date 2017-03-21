@@ -12,7 +12,7 @@ ua = User.create({
     description:"Hello world, I am a professional photographer",
     email: "guestdemo@helper.com",
     cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--JlV88ebH--/v1490056565/Desktop-download-california-wallpapers-HD_ddmmy2.jpg",
-    user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489787225/unknown-user_dc4ike.png"
+    user_image_url: "http://res.cloudinary.com/nightstock/image/upload/s--OY9oInfN--/v1490065061/3331467084_13b583b888_b_z2u2rx.jpg"
   })
 
 ub = User.create({

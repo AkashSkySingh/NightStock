@@ -1,19 +1,15 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = current_user ? current_user.posts : Post.all.select {|post| [1, 7, 8, 10, 11, 12, 14, 16, 17, 20].include?(post.id)}
+    @posts = current_user.posts 
     # @posts = current_user.posts
     # @posts = Post.all
+    # @posts = Post.all.select {|post| [1, 7, 8, 10, 11, 12, 14, 16, 17, 20].include?(post.id)}
     render :index
   end
 
   def show
     @post = Post.find(params[:id])
     render :show
-  end
-
-  def splash
-    @posts = Post.all.select {|post| [1, 7, 8, 10, 11, 12, 14, 16, 17, 20].include?(post.id)}
-    render :splash
   end
 
   def create

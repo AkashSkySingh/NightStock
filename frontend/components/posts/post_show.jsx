@@ -86,7 +86,7 @@ class PostShow extends React.Component {
           <p>{post.description}</p>
           <h4>Located in {post.location}</h4>
           <button className="show-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
-      </Modal>
+        </Modal>
       </div>
     );
   }

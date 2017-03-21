@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
-import { fetchSplashPosts } from '../../actions/post_actions';
+import { fetchPosts } from '../../actions/post_actions';
 import Splash from './splash';
 
 const mapStateToProps = (state) => {
   return ({
-    posts: state.posts,
     currentUser: state.session.currentUser
   });
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchSplashPosts: () => dispatch(fetchSplashPosts())
+  fetchPosts: () => dispatch(fetchPosts())
 });
 
 export default connect(

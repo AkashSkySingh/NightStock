@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
     end
 
     if !(@user.user_image_url)
-      @user.user_image_url = "http://res.cloudinary.com/nightstock/image/upload/v1489787225/unknown-user_dc4ike.png"
+      @user.user_image_url = "http://res.cloudinary.com/nightstock/image/upload/s--OY9oInfN--/v1490065061/3331467084_13b583b888_b_z2u2rx.jpg"
     end
 
     if @user.save
