@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if !(@user.cover_photo_url)
-      @user.cover_photo_url = "http://res.cloudinary.com/nightstock/image/upload/v1489787439/night-hd-wallpapers-26_dynjsd.jpg"
+      @user.cover_photo_url = "http://res.cloudinary.com/nightstock/image/upload/s--JlV88ebH--/v1490056565/Desktop-download-california-wallpapers-HD_ddmmy2.jpg"
     end
 
     if !(@user.user_image_url)

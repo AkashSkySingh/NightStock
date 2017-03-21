@@ -63,7 +63,7 @@ class PostForm extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.params) {
+    if (this.props.formType !== 'new') {
       this.props.fetchPost(this.props.params.postId);
     }
   }

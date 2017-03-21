@@ -1,5 +1,11 @@
 import React from 'react';
+import Masonry from 'react-masonry-component';
 import PostIndexItem from './post_index_item';
+
+const masonryOptions = {
+  transition: 0
+};
+
 
 class PostIndex extends React.Component {
   componentDidMount() {
@@ -7,19 +13,23 @@ class PostIndex extends React.Component {
   }
 
   render () {
+
+    let childElements = this.props.posts.map( (post) => {
+      return (
+        <li className="masonry-post" key={post.id} >
+          <img src={post.image_url} className="masonry-post-image"  />
+        </li>
+      );
+    });
     return (
-      <div>
-        <ul>
-          {
-            this.props.posts.map(post => (
-              <PostIndexItem
-                key={post.id}
-                deletePost={this.props.deletePost}
-                post={post} />
-            ))
-          }
-        </ul>
-      </div>
+      <Masonry
+        className={'my-gallery-class'}
+        elementType={'ul'}
+        options={masonryOptions}
+        disableImagesLoaded={false}
+        updateOnEachImageLoad={false}>
+        {childElements}
+      </Masonry>
     );
   }
 }

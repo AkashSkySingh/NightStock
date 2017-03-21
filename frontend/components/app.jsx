@@ -14,9 +14,25 @@ const App = ({ children }) => (
       </a>
       <GreetingContainer />
     </header>
-    <div className="Center">
-      { children }
-    </div>
+    { children }
+    <footer>
+      <ul>
+        <li>
+          <a href=""><h4>LinkedIn</h4></a>
+        </li>
+        <li>
+          <h4>NightStock</h4>
+          <p>
+            Created as a Full-Stack Project by Akash Singh.
+            <br />
+            NightStock is a clone-site based off of <a href="500px.com">500px</a>.
+          </p>
+        </li>
+        <li>
+          <a href="https://github.com/AkashSkySingh/NightStock"><h4>GitHub</h4></a>
+        </li>
+      </ul>
+    </footer>
   </div>
 );
 

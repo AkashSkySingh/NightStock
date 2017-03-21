@@ -21,7 +21,7 @@
 
 // Total Reset with all related tags
 
-header, a, nav, body, div, form, label, hgroup {
+header, a, nav, body, div, form, label, hgroup, footer {
   margin: 0;
   padding: 0;
   border: 0;
@@ -74,7 +74,7 @@ header {
   align-items: center;
   justify-content: space-between;
   max-height: 30px;
-  min-width: 400px;
+  min-width: 700px;
   width: 100%;
   margin-top: 20px;
   background-color: inherit;
@@ -89,6 +89,8 @@ header {
   text-decoration: none;
   padding: 20px;
   font-family: 'Satisfy', cursive;
+  text-shadow: 0 0 5px white;
+
 }
 
 .Auth-NSLogo {
@@ -120,6 +122,8 @@ div header div hgroup {
 
 .sign:hover {
   background-color: rgba(255,255,255,0.5);
+  text-shadow: 0 0 5px white;
+
 }
 
 .header-current-user-img {
@@ -129,6 +133,31 @@ div header div hgroup {
   border: 2px solid white;
   background-color: gray;
   background-size: cover;
+}
+
+
+
+// Footer related CSS
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(0,0,0,0.9);
+  max-height: 100px;
+  min-height: 80px;
+  min-width: 700px;
+}
+
+footer ul li h4 {
+  margin: 5px 0 5px 0;
+}
+
+footer ul li p {
+  margin: 5px 0 5px 0;
 }
 
 
@@ -195,6 +224,8 @@ div header div hgroup {
 
 .post:hover {
   background-color: rgba(255,255,255,0.5);
+  text-shadow: 0 0 5px white;
+
 }
 
 .post-form-title {
@@ -246,32 +277,56 @@ div header div hgroup {
 
 // Splash page related CSS
 
-.Center {
-  min-width: 400px;
+.Middle {
+  min-width: 700px;
   width: 100%;
   height: 100%;
+  vertical-align: middle;
 }
 
-.Center .Middle {
+.Wrap {
   max-width: 800px;
   vertical-align: middle;
   padding: 0 20px;
   text-align: left;
-  margin: 400px auto;
-  background-color: rgba(0, 0, 0, .5);
+  margin: 430px auto;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.Wrap h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px white;
+}
+
+.Wrap h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+  text-shadow: 0 0 5px white;
 }
 
 .Splash-Text {
   color: white;
 }
-.Center .Middle h1 {
-  font-family: 'Satisfy', cursive;
-  font-size: 40px;
-  margin-bottom: 10px;
+
+
+
+// Masonry CSS
+
+.my-gallery-class {
+  list-style: none;
+  display: flex;
+  margin: auto 0;
 }
 
-.Center .Middle h3 {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  margin-top: 10px;
+.masonry-post-image {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  box-shadow: 0 0 5px 2px;
 }

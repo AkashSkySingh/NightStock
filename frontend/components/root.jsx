@@ -31,7 +31,6 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={SplashContainer} />
-          <Route path="/posts" component={PostIndexContainer} />
         </Route>
       </Router>
     </Provider>

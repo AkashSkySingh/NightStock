@@ -5,13 +5,19 @@ export const fetchPost = id => {
   });
 };
 
-
 export const fetchPosts = () => (
   $.ajax({
     method: 'GET',
     url: 'api/posts',
   })
 );
+
+export const fetchSplashPosts = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/posts/splash'
+  })
+)
 
 export const updatePost = post => (
   $.ajax({

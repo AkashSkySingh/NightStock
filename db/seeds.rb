@@ -11,7 +11,7 @@ ua = User.create({
     password: "asd123",
     description:"Hello world, I am a professional photographer",
     email: "guestdemo@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787439/night-hd-wallpapers-26_dynjsd.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--JlV88ebH--/v1490056565/Desktop-download-california-wallpapers-HD_ddmmy2.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489787225/unknown-user_dc4ike.png"
   })
 
@@ -20,7 +20,7 @@ ub = User.create({
     password: "asd123",
     description:"Bonjour friends",
     email: "Jaonnes@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787898/22a7760b284310c6f41bd7666c58b059_xjth7d.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--cU3EUKJ1--/v1490055906/f9ff137a00dfac3af502bdb75cf9555d_fgjbff.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489786686/images_fyh3rz.jpg"
   })
 
@@ -29,7 +29,7 @@ uc = User.create({
     password: "asd123",
     description:"Check out my page!",
     email: "Michelle@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787921/bridge-bokeh-lights_ir9bto.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--TC4lP8SW--/c_scale,h_1080/v1490053783/9517-wallpapers-landscape_bnipga.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489786899/9203867789_680abdd0eb_b_gsa6hv.jpg"
   })
 
@@ -38,7 +38,7 @@ ud = User.create({
     password: "asd123",
     description:"Hello all, see my pictures.",
     email: "Ken@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787838/138260-city-lights-city-night-cityscapes-new-york-state-rain-the-bronx-urban_gb0v8x.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--S1CgtX3K--/c_scale,h_1080/v1490056971/RtobAkb_hpmler.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489788429/600_432702483_gu6ooz.jpg"
   })
 
@@ -47,7 +47,7 @@ ue = User.create({
     password: "asd123",
     description:"Nothing, but skylight.",
     email: "Jack@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787469/night-wallpapers-hd-2_cqlkhs.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--ZIDNd9MC--/v1490056366/46786944-night-wallpapers_q3ab0x.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489786575/279201ae399017b5d7c2dd7e881c2d46_fd4ogi.jpg"
   })
 
@@ -56,7 +56,7 @@ uf = User.create({
     password: "asd123",
     description:"Maybe I can be the best.",
     email: "Kary@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787552/Spinning_the_light_Ultra_HD_znnvkm.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--C6VVnnjz--/c_scale,h_1080/v1490056296/45453381-night-wallpapers_wc8rlr.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489786625/images_aadzc4.jpg"
   })
 
@@ -65,7 +65,7 @@ ug = User.create({
     password: "asd123",
     description:"Life flies when you're having fun.",
     email: "Situ@helper.com",
-    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/v1489787484/wallpaper_for_night_008_lj26pp.jpg",
+    cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--v2Qr5LHC--/v1490056230/45219919-night-wallpapers_coyztb.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489786795/30996643164_a9c48dcd80_b_keoccv.jpg"
   })
 
@@ -152,7 +152,7 @@ pj = Post.create({
     title: "The Tower of Lights",
     description: "Iconic water front shot",
     location: "Paris, France",
-    image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489896564/eiffel_tower_paris_night_lights_france_bridge_river_hdr_36870_3840x2160_btmltm.jpg",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--gmXW2tSu--/c_scale,h_1080/v1489896564/eiffel_tower_paris_night_lights_france_bridge_river_hdr_36870_3840x2160_btmltm.jpg",
     user_id: 2
   })
 
@@ -188,7 +188,7 @@ pn = Post.create({
     title: "Ferry reflection",
     description: "The ferry building at night",
     location: "San Francisco, California, USA",
-    image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897140/san-francisco-streets-at-night-wallpaper-3_eo6tvd.jpg",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--DR7HtImC--/c_scale,h_1080/v1489897140/san-francisco-streets-at-night-wallpaper-3_eo6tvd.jpg",
     user_id: 1
   })
 
@@ -224,7 +224,7 @@ pr = Post.create({
     title: "A sight of recovery",
     description: "Chicago is recovering!",
     location: "Chicago, Michigan, USA",
-    image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489898039/Chicago_River_night_3_nonc1v.jpg",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/c_limit,h_1080/v1489898039/Chicago_River_night_3_nonc1v.jpg",
     user_id: 5
   })
 
