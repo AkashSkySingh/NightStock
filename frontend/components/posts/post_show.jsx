@@ -41,9 +41,9 @@ class PostShow extends React.Component {
     super(props);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.state = this.props.post;
     this.state = {
       modalOpen: false,
+      modalType: 'edit'
     };
   }
 
@@ -59,32 +59,32 @@ class PostShow extends React.Component {
 
   closeModal(){
     this.setState({
-      modalOpen: false
+      modalOpen: false,
+      modalType: 'new'
     });
   }
 
   render () {
-    debugger;
+
 
     const post = this.props.post;
-    if (!post) {
-      return <div><h1>Work in Progress...</h1></div>;
-    }
 
     return (
       <div className="Middle">
-        <div className="Wrap">
-          <h1>{this.props.post.title}</h1>
+        <div className="Post-Show">
+          <h1>{post.title}</h1>
+          <h2>{post.description}</h2>
+          <h3>Photo taken in {post.location}</h3>
+          <img src={post.image_url} />
+          <button onClick={()=>this.props.deletePost(post.id)}>Delete Post</button>
+          <button onClick={()=>this.openModal()}>Edit Post</button>
         </div>
         <Modal
           contentLabel="Modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           style={customStyles}>
-          <img src={this.props.post.image_url} alt={this.props.post.title}/>
-          <h3>{this.props.post.title}</h3>
-          <p>{this.props.post.description}</p>
-          <h4>Located in {this.props.post.location}</h4>
+          
           <button className="show-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
         </Modal>
       </div>

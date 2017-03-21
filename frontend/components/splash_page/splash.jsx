@@ -36,7 +36,7 @@ class Splash extends React.Component {
   centerSignedIn (){
     return (
       <div className="Middle">
-        <div className="User" >
+        <div className="User-Show" >
           <div className="User-imgs">
             <img className="User-CP" src={this.props.currentUser.cover_photo_url} />
             <img className="User-UP" src={this.props.currentUser.user_image_url} />

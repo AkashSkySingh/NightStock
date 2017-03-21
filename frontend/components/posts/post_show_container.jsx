@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
 import PostShow from './post_show';
-import { fetchPost } from '../../actions/post_actions';
+import { fetchPost, updatePost, deletePost } from '../../actions/post_actions';
 
 const mapStateToProps = (state, ownProps) => {
+
   return ({
-    post: state.post
+    post: state.postDetail
   });
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchPost: id => dispatch(fetchPost(id))
+  fetchPost: id => dispatch(fetchPost(id)),
+  updatePost: post => dispatch(updatePost(post)),
+  deletePost: id => dispatch(deletePost(id))
 });
 
 export default connect(

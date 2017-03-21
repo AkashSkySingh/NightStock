@@ -33,7 +33,11 @@ header, a, nav, body, div, form, label, hgroup, footer {
   color: white;
 }
 
-
+#root {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 
 // Site background related CSS
 
@@ -73,11 +77,11 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-height: 30px;
-  min-width: 700px;
   width: 100%;
-  margin-top: 20px;
-  background-color: inherit;
+  background-color: rgba(0, 0, 0, .9);
+  top: 0;
+  position: fixed;
+  height: 50px;
 }
 
 header a {
@@ -142,8 +146,9 @@ div header div hgroup {
 // Footer related CSS
 
 footer {
-  margin: 0;
-  padding-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer ul {
@@ -154,9 +159,6 @@ footer ul {
   text-align: center;
   font-family: 'Lato', sans-serif;
   background-color: rgba(0,0,0,0.9);
-  max-height: 100px;
-  min-height: 80px;
-  min-width: 700px;
 }
 
 footer ul li h4 {
@@ -290,7 +292,7 @@ footer ul li p {
 // Splash page related CSS
 
 .Middle {
-  min-width: 700px;
+  min-width: 800px;
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -333,7 +335,6 @@ footer ul li p {
   font-size: 14px;
   border-radius: 5px;
   transform: skewX(-10deg);
-
 }
 
 .Splash-Demo-b:hover {
@@ -348,6 +349,7 @@ footer ul li p {
   list-style: none;
   display: flex;
   margin: auto 0;
+  background-color: rgba(0, 0, 0, .9);
 }
 
 .masonry-post {
@@ -368,7 +370,6 @@ footer ul li p {
 
 .masonry-post-image:hover {
   box-shadow: 0 0 10px 5px;
-
 }
 
 .masonry-post-hover-items {
@@ -397,7 +398,7 @@ footer ul li p {
 
 // User homefeed page
 
-.User {
+.User-Show {
   font-family: 'Satisfy', cursive;
   background-color: rgba(0, 0, 0, .9);
 }
