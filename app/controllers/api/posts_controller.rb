@@ -1,9 +1,12 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = current_user.posts 
-    # @posts = current_user.posts
-    # @posts = Post.all
-    # @posts = Post.all.select {|post| [1, 7, 8, 10, 11, 12, 14, 16, 17, 20].include?(post.id)}
+
+    # if signed_in?
+    @posts = current_user.posts
+    # else
+    #   @posts = Post.all.select {|post| [1, 7, 8, 10, 11, 12, 14, 16, 17, 20].include?(post.id)}
+    # end
+    #
     render :index
   end
 

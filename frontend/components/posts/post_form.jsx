@@ -29,7 +29,7 @@ const customStyles = {
     color                 : 'white',
     backgroundColor       : 'rgba(0, 0, 0, 0.9)',
     width                 : '250px',
-    height                : '400px',
+    height                : '600px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
@@ -49,14 +49,14 @@ class PostForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.props.post;
+    this.dropZone = this.dropZone.bind(this);
     this.state = {
-      title: "",
-      description: "",
-      image_url: "",
-      location: "",
+      title: undefined,
+      description: undefined,
+      image_url: undefined,
+      location: undefined,
       user_id: this.props.post.user_id,
-      uploadCloudinaryUrl: '',
+      uploadCloudinaryUrl: undefined,
       modalOpen: false,
       modalType: "new"
     };
@@ -128,12 +128,47 @@ class PostForm extends React.Component {
   closeModal(){
     this.setState({
       modalOpen: false,
-      title: "",
-      description: "",
-      location: "",
-      uploadCloudinaryUrl: ""
+      title: undefined,
+      description: undefined,
+      location: undefined,
+      uploadCloudinaryUrl: undefined
     });
   }
+
+  dropZone() {
+    if (this.state.uploadCloudinaryUrl !== undefined){
+      return (
+        <div className="DZone" >
+          <img className="post-form-preview-image" src={this.state.uploadCloudinaryUrl} />
+        </div>
+      );
+    } else {
+      return (
+        <Dropzone
+          multiple={false}
+          accept='image/*'
+          onDrop={this.onImageDrop.bind(this)}
+          className="DZone"
+          >
+          <p>Drag and drop an image into here,
+            <br />
+            or click to select a picture!</p>
+        </Dropzone>
+      );
+    }
+  }
+
+  renderErrors() {
+		return(
+			<ul>
+				{this.props.errors.map((error, i) => (
+					<li key={`error-${i}`}>
+						{error}
+					</li>
+				))}
+			</ul>
+		);
+	}
 
   render () {
     const text = this.props.formType === 'new' ? "Create Post" : "Update Post";
@@ -177,23 +212,13 @@ class PostForm extends React.Component {
                   onChange={this.update('description')} />
               </label>
               <br/>
-
-              <Dropzone
-                multiple={false}
-                accept='image/*'
-                onDrop={this.onImageDrop.bind(this)}
-                className="DZone">
-                <p>Drop and drop an image,
-                  <br />
-                  or click to select a picture!</p>
-              </Dropzone>
+              {this.dropZone()}
               <br/>
-
               <input className="post-form-b" type="submit" value={text} />
-            <button className="post-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
-
-          </div>
+              <button className="post-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
+            </div>
           </form>
+          <br />
         </Modal>
       </div>
     );

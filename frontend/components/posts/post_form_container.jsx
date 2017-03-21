@@ -3,12 +3,15 @@ import PostForm from './post_form';
 import { fetchPost, createPost, updatePost } from '../../actions/post_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  let post = { title: "", description: "", location: "", image_url: "", user_id: state.session.currentUser.id };
+  let post = { title: null, description: null, location: null, image_url: null, user_id: state.session.currentUser.id };
   if(ownProps.params) {
     post = state.posts[ownProps.params.postId];
   }
   let formType = ownProps.formType || "new";
-  return { post, formType };
+  return ({
+    post,
+    formType
+  });
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {

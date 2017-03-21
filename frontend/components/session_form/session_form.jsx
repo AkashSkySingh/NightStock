@@ -20,7 +20,7 @@ const customStyles = {
     transform             : 'translate(-50%, -50%)',
     borderRadius          : '7px',
     color                 : 'white',
-    backgroundColor       : 'rgba(0, 0, 0, 0.6)',
+    backgroundColor       : 'rgba(0, 0, 0, 0.95)',
     width                 : '225px',
     height                : '300px',
     display               : 'flex',
@@ -30,7 +30,7 @@ const customStyles = {
     padding               : '20px',
     fontFamily            : 'Lato, san-serif',
     border                : '2px solid rgb(204, 204, 204)',
-    boxShadow             : '0 0px 100px 60px rgba(0, 0, 0, 1)'
+    boxShadow             : '0 0px 100px 60px rgba(0, 0, 1, 1)'
   }
 };
 

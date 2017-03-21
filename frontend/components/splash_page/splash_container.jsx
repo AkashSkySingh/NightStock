@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchPosts } from '../../actions/post_actions';
+import { signin } from '../../actions/session_actions';
 import Splash from './splash';
 
 const mapStateToProps = (state) => {
@@ -8,8 +8,10 @@ const mapStateToProps = (state) => {
   });
 };
 
+const demoUser = {username:"Guest", password:"asd123"};
+
 const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts())
+  loadDemo: () => dispatch(signin(demoUser))
 });
 
 export default connect(

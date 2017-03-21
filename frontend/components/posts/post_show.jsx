@@ -51,10 +51,6 @@ class PostShow extends React.Component {
     this.props.fetchPost(this.props.params.postId);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.props.fetchPost(nextProps.params.postId);
-  }
-
   openModal() {
     this.setState({
       modalOpen: true
@@ -68,23 +64,27 @@ class PostShow extends React.Component {
   }
 
   render () {
+    debugger;
 
     const post = this.props.post;
     if (!post) {
-      return <div>Loading...</div>;
+      return <div><h1>Work in Progress...</h1></div>;
     }
 
     return (
-      <div>
+      <div className="Middle">
+        <div className="Wrap">
+          <h1>{this.props.post.title}</h1>
+        </div>
         <Modal
           contentLabel="Modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           style={customStyles}>
-          <img src={post.image_url} alt={post.title}/>
-          <h3>{post.title}</h3>
-          <p>{post.description}</p>
-          <h4>Located in {post.location}</h4>
+          <img src={this.props.post.image_url} alt={this.props.post.title}/>
+          <h3>{this.props.post.title}</h3>
+          <p>{this.props.post.description}</p>
+          <h4>Located in {this.props.post.location}</h4>
           <button className="show-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
         </Modal>
       </div>

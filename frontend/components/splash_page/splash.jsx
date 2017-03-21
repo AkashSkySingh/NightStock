@@ -1,24 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Masonry from 'react-masonry-component';
 import PostIndexContainer from '../posts/post_index_container';
 
-
-const masonryOptions = {
-  transition: 0
-};
 
 class Splash extends React.Component {
   constructor(props){
     super(props);
     this.centerNonSignedIn = this.centerNonSignedIn.bind(this);
     this.centerSignedIn = this.centerSignedIn.bind(this);
-    this.splashMasonry = this.splashMasonry.bind(this);
+    this.loadDemoUser = this.loadDemoUser.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchPosts();
+  loadDemoUser(e){
+    e.preventDefault();
+    this.props.loadDemo();
   }
+
 
   centerNonSignedIn (){
     return (
@@ -28,10 +25,10 @@ class Splash extends React.Component {
             A look into night-life from around the world.
           </h1>
           <h3 className="Splash-Text">
-            Come see what night elsewhere is like.
+            Come see what night elsewhere is like. &nbsp;&nbsp;
+            <button className="Splash-Demo-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
           </h3>
         </div>
-
       </div>
     );
   }
@@ -55,26 +52,6 @@ class Splash extends React.Component {
         </div>
         <PostIndexContainer />
       </div>
-    );
-  }
-
-  splashMasonry() {
-    let childElements = this.props.posts.map( (post) => {
-      return (
-        <li className="masonry-post" key={post.id} >
-          <img src={post.image_url} className="masonry-post-image"  />
-        </li>
-      );
-    });
-    return (
-      <Masonry
-        className={'my-gallery-class'}
-        elementType={'ul'}
-        options={masonryOptions}
-        disableImagesLoaded={false}
-        updateOnEachImageLoad={false}>
-        {childElements}
-      </Masonry>
     );
   }
 
