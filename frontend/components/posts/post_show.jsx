@@ -56,7 +56,7 @@ class PostShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchPost(this.props.params.postId);
+    this.props.fetchesPost(this.props.params.postId);
   }
 
   componentWillReceiveProps(newProps) {
@@ -71,7 +71,7 @@ class PostShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updatePost(this.state);
+    this.props.updatesPost(this.state);
     this.closeModal();
   }
 
@@ -102,13 +102,15 @@ class PostShow extends React.Component {
   }
 
   creatorButtons(){
-    if (this.props.post.user){
-      if (this.props.post.user.user_id === this.props.currentUser.id){
-        return (
-          <div className="post-show-buttons">
-            <button className="post-show-b" onClick={()=>this.openModal()}>Edit Post</button>
-          </div>
-        );
+    if (this.props.currentUser){
+      if (this.props.post.user){
+        if (this.props.post.user.user_id === this.props.currentUser.id){
+          return (
+            <div className="post-show-buttons">
+              <button className="post-show-b" onClick={()=>this.openModal()}>Edit Post</button>
+            </div>
+          );
+        }
       }
     }
   }
@@ -177,7 +179,7 @@ class PostShow extends React.Component {
 
               <br/>
               <input className="post-form-b" type="submit" value="Update Post" />
-              <button className="post-form-b" onClick={()=>this.props.deletePost(post.id)}>Delete Post</button>
+              <button className="post-form-b"  onClick={()=>this.props.deletesPost(post.id)}>Delete Post</button>
             </form>
         </Modal>
       </div>

@@ -482,7 +482,7 @@ footer ul li p {
 
 
 
-// User homefeed page
+// User page related CSS
 
 .user-show {
   font-family: 'Satisfy', cursive;
@@ -502,14 +502,13 @@ footer ul li p {
 
 .user-up {
   width: 100%;
-
-  max-width: 300px;
+  max-width: 200px;
   max-height: 400px;
   border-radius: 25px;
   border: 2px solid white;
   background-color: gray;
   background-size: cover;
-  margin: -100px auto 0 auto;
+  margin: -80px auto 0 auto;
 }
 
 .user-texts {
@@ -521,12 +520,65 @@ footer ul li p {
 .user-un {
   font-size: 50px;
   margin: 30px auto 10px auto;
-
-
 }
 
 .user-desc {
   font-size: 25px;
   margin: 0 auto 50px auto;
+}
 
+
+
+// Homefeed related CSS
+.homefeed-show {
+  font-family: 'Satisfy', cursive;
+}
+
+.homefeed-imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.homefeed-cp {
+  height: 100%;
+  max-height: 300px;
+}
+
+.homefeed-up {
+  width: 100%;
+  max-width: 200px;
+  max-height: 400px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: gray;
+  background-size: cover;
+  margin: -80px auto 0 auto;
+}
+
+.homefeed-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homefeed-un {
+  font-size: 40px;
+  margin: 30px auto 10px auto;
+}
+
+.homefeed-show-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 0 auto 50px auto;
+}
+
+.homefeed-desc {
+  font-size: 20px;
+  margin: 5px auto;
 }

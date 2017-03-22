@@ -36,18 +36,26 @@ class Splash extends React.Component {
   centerSignedIn (){
     return (
       <div className="middle">
-        <div className="user-show" >
-          <div className="user-imgs">
-            <img className="user-cp" src={this.props.currentUser.cover_photo_url} />
-            <img className="user-up" src={this.props.currentUser.user_image_url} />
+        <div className="homefeed-show" >
+          <div className="homefeed-imgs">
+            <img className="homefeed-cp" src={this.props.currentUser.cover_photo_url} />
+            <img className="homefeed-up" src={this.props.currentUser.user_image_url} />
           </div>
-          <div className="user-texts" >
-            <h1 className="user-un">
-              {this.props.currentUser.username}
+          <div className="homefeed-texts" >
+            <h1 className="homefeed-un">
+              {`${this.props.currentUser.username}'s Homefeed`}
             </h1>
-            <h3 className="user-desc">
-              {this.props.currentUser.description}
-            </h3>
+            <div className="homefeed-show-details">
+              <h3 className="homefeed-desc">
+                {`Posts: ${this.props.currentUser.posts.length}`}
+              </h3>
+              <h3 className="homefeed-desc homefeed-desc-mid">
+                {`Following: 2`}
+              </h3>
+              <h3 className="homefeed-desc">
+                {`Followers: 7`}
+              </h3>
+            </div>
           </div>
         </div>
         <PostIndexContainer />

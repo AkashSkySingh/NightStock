@@ -32,18 +32,16 @@ export const fetchPost = id => dispatch => {
 
 export const updatePost = post => dispatch => {
   return PostApiUtil.updatePost(post)
-  .then(post => dispatch(receivePost(post)))
-  .then(hashHistory.push("/"));
+  .then(post => dispatch(receivePost(post)));
 };
 
 export const createPost = post => dispatch => {
-  return PostApiUtil.createPost(post).then(post => dispatch(receivePost(post))).then(hashHistory.push(`/posts/${post.id}`));
+  return PostApiUtil.createPost(post).then(createdPost => {
+    dispatch(receivePost(createdPost));
+    hashHistory.push(`/posts/${createdPost.id}`);
+  });
 };
 
 export const deletePost = id => dispatch => {
   return PostApiUtil.deletePost(id).then(post => dispatch(removePost(post))).then(hashHistory.push("/"));
-};
-
-export const fetchSplashPosts = () => dispatch => {
-  return PostApiUtil.fetchSplashPosts().then(posts => dispatch(receiveAllPosts(posts)));
 };

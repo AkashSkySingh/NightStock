@@ -207,7 +207,7 @@ class PostForm extends React.Component {
               {this.dropZone()}
               <br/>
               <input className="post-form-b" type="submit" value="Create Post" />
-              <button className="post-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
+              <button className="post-form-b" onClick={this.closeModal}>Cancel</button>
             </div>
           </form>
           <br />
