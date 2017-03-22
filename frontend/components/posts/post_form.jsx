@@ -29,7 +29,7 @@ const customStyles = {
     color                 : 'white',
     backgroundColor       : 'rgba(0, 0, 0, 0.9)',
     width                 : '250px',
-    height                : '600px',
+    height                : '530px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
@@ -57,20 +57,10 @@ class PostForm extends React.Component {
       location: undefined,
       user_id: this.props.post.user_id,
       uploadCloudinaryUrl: undefined,
-      modalOpen: false,
-      modalType: "new"
+      modalOpen: false
     };
   }
 
-  componentDidMount() {
-    if (this.props.formType !== 'new') {
-      this.props.fetchPost(this.props.params.postId);
-    }
-  }
-
-  componentWillReceiveProps(newProps) {
-    this.setState(newProps.post);
-  }
 
   update(field) {
     return (e) => {
@@ -108,7 +98,7 @@ class PostForm extends React.Component {
 
     upload.end((err, response) => {
       if (err) {
-  
+
       }
 
       if (response.body.secure_url !== '') {
@@ -171,11 +161,11 @@ class PostForm extends React.Component {
 	}
 
   render () {
-    const text = this.props.formType === 'new' ? "Create Post" : "Update Post";
+
     return (
       <div>
         <nav >
-          <button className="post" onClick={this.openModal.bind(this)}>{text}</button>
+          <button className="post" onClick={this.openModal.bind(this)}>Create Post</button>
         </nav>
         <Modal
           contentLabel="Modal"
@@ -184,7 +174,7 @@ class PostForm extends React.Component {
           style={customStyles}>
 
           <h3 className="post-form-title">
-            {text}
+            Create Post
           </h3>
 
           <form onSubmit={this.handleSubmit}>
@@ -214,7 +204,7 @@ class PostForm extends React.Component {
               <br/>
               {this.dropZone()}
               <br/>
-              <input className="post-form-b" type="submit" value={text} />
+              <input className="post-form-b" type="submit" value="Create Post" />
               <button className="post-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
             </div>
           </form>

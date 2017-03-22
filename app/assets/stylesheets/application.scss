@@ -35,8 +35,17 @@ header, a, nav, body, div, form, label, hgroup, footer {
 
 #root {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 0px;
+  padding-bottom: 90px;
+  min-width: 800px;
+}
+
+.middle {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  padding: 70px 0;
+  max-width: inherit;
 }
 
 // Site background related CSS
@@ -81,10 +90,10 @@ header {
   background-color: rgba(0, 0, 0, .9);
   top: 0;
   position: fixed;
-  height: 50px;
+  height: 70px;
 }
 
-header a {
+.anchors {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -96,7 +105,7 @@ header a {
   text-shadow: 0 0 30px white;
 }
 
-header a:hover {
+.anchors:hover {
   text-shadow: 0 0 10px white;
 
 }
@@ -207,7 +216,9 @@ footer ul li p {
   font-family: 'Lato', sans-serif;
   border-radius: 5px;
   cursor: pointer;
-  height: 20px;
+  height: 30px;
+  width: 50%;
+  font-size: 13px;
 }
 
 .sign-form-b:hover {
@@ -265,7 +276,9 @@ footer ul li p {
   font-family: 'Lato', sans-serif;
   border-radius: 5px;
   cursor: pointer;
-  height: 20px;
+  height: 30px;
+  width: 50%;
+  font-size: 13px;
 }
 
 .post-form-b:hover {
@@ -289,43 +302,139 @@ footer ul li p {
 
 
 
-// Splash page related CSS
+// Post show related CSS
 
-.Middle {
-  min-width: 800px;
+.post-show {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 100%;
+  margin: 100px auto;
   vertical-align: middle;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .9);
+  max-width: 900px;
+  padding: 100px;
 }
 
-.Wrap {
+
+.post-show-details {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  min-width: 200px;
+  padding-left: 30px;
+}
+
+.post-show-user-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  min-width: 100px;
+  padding-top: 10px;
+}
+
+.post-show-user-by {
+  font-family: 'Satisfy', cursive;
+  padding-right: 20px;
+}
+
+.post-show-user-img {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: gray;
+  background-size: cover;
+}
+
+.post-show-user-un {
+  padding-left: 20px;
+  font-family: 'Satisfy', cursive;
+
+}
+
+.post-show-title {
+  font-family: 'Satisfy', cursive;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.post-show-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+
+.post-show-buttonloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.post-show-loc {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  padding-bottom: 10px;
+
+}
+
+.post-show-b {
+  color: white;
+  background-color: inherit;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 80px;
+  font-size: 13px;
+  margin: 20px 10px 20px;
+}
+
+.post-show-img {
+  vertical-align: middle;
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+}
+
+
+// Splash page related CSS
+
+.wrap {
   max-width: 800px;
   vertical-align: middle;
   padding: 0 20px;
   text-align: left;
-  margin: 360px auto 315px auto;
+  margin: 360px auto 300px auto;
   background-color: rgba(0, 0, 0, .3);
 }
 
-.Wrap h1 {
+.wrap h1 {
   font-family: 'Satisfy', cursive;
   font-size: 40px;
   margin-bottom: 10px;
   text-shadow: 0 0 40px white;
 }
 
-.Wrap h3 {
+.wrap h3 {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   margin-top: 10px;
   text-shadow: 0 0 40px white;
 }
 
-.Splash-Text {
+.splash-text {
   color: white;
 }
 
-.Splash-Demo-b {
+.splash-demo-b {
   height: 25px;
   min-height: 20px;
   background-color: inherit;
@@ -337,7 +446,7 @@ footer ul li p {
   transform: skewX(-10deg);
 }
 
-.Splash-Demo-b:hover {
+.splash-demo-b:hover {
   background-color: rgba(255,255,255,0.5);
 }
 
@@ -348,8 +457,9 @@ footer ul li p {
 .my-gallery-class {
   list-style: none;
   display: flex;
-  margin: auto 0;
+  margin: auto;
   background-color: rgba(0, 0, 0, .9);
+  padding-bottom: 50px;
 }
 
 .masonry-post {
@@ -372,50 +482,28 @@ footer ul li p {
   box-shadow: 0 0 10px 5px;
 }
 
-.masonry-post-hover-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: -50px;
-}
-
-.masonry-post-hover-items h4 {
-  margin: 0;
-  padding: 0;
-}
-
-.User-hover-image {
-  max-width: 50px;
-  max-height: 50px;
-  border-radius: 25px;
-  border: 2px solid white;
-  background-color: gray;
-  background-size: cover;
-}
-
 
 
 // User homefeed page
 
-.User-Show {
+.user-show {
   font-family: 'Satisfy', cursive;
   background-color: rgba(0, 0, 0, .9);
 }
 
-.User-imgs {
+.user-imgs {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
 }
 
-.User-CP {
+.user-cp {
   height: 100%;
   max-height: 300px;
 }
 
-.User-UP {
+.user-up {
   width: 100%;
 
   max-width: 300px;
@@ -427,21 +515,21 @@ footer ul li p {
   margin: -100px auto 0 auto;
 }
 
-.User-texts {
+.user-texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.User-UN {
+.user-un {
   font-size: 50px;
   margin: 30px auto 10px auto;
 
 
 }
 
-.User-Desc {
+.user-desc {
   font-size: 25px;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 50px auto;
 
 }

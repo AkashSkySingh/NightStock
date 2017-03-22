@@ -41,7 +41,7 @@ export const createPost = post => dispatch => {
 };
 
 export const deletePost = id => dispatch => {
-  return PostApiUtil.deletePost(id).then(post => dispatch(removePost(post)));
+  return PostApiUtil.deletePost(id).then(post => dispatch(removePost(post))).then(hashHistory.push("/"));
 };
 
 export const fetchSplashPosts = () => dispatch => {

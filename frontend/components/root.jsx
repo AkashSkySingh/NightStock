@@ -11,10 +11,10 @@ import SplashContainer from './splash_page/splash_container';
 const Root = ({ store }) => {
 
   // Logic to prevent non-users accessing internal site routes
-  const _ensureSignedIn = (nextState, replace) => {
+  const _ensureSignedIn = (nextState) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/');
+      hashHistory.push('/');
     }
   };
 
@@ -31,7 +31,7 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={SplashContainer} />
-          <Route path="/posts/:postId" component={PostShowContainer} />
+          <Route path="/posts/:postId" component={PostShowContainer} onEnter={_ensureSignedIn()}/>
         </Route>
       </Router>
     </Provider>

@@ -19,14 +19,14 @@ class Splash extends React.Component {
 
   centerNonSignedIn (){
     return (
-      <div className="Middle">
-        <div className="Wrap" >
-          <h1 className="Splash-Text">
+      <div className="middle">
+        <div className="wrap" >
+          <h1 className="splash-text">
             A look into night-life from around the world.
           </h1>
-          <h3 className="Splash-Text">
+          <h3 className="splash-text">
             Come see what night elsewhere is like. &nbsp;&nbsp;
-            <button className="Splash-Demo-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
+            <button className="splash-demo-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
           </h3>
         </div>
       </div>
@@ -35,17 +35,17 @@ class Splash extends React.Component {
 
   centerSignedIn (){
     return (
-      <div className="Middle">
-        <div className="User-Show" >
-          <div className="User-imgs">
-            <img className="User-CP" src={this.props.currentUser.cover_photo_url} />
-            <img className="User-UP" src={this.props.currentUser.user_image_url} />
+      <div className="middle">
+        <div className="user-show" >
+          <div className="user-imgs">
+            <img className="user-cp" src={this.props.currentUser.cover_photo_url} />
+            <img className="user-up" src={this.props.currentUser.user_image_url} />
           </div>
-          <div className="User-texts" >
-            <h1 className="User-UN">
+          <div className="user-texts" >
+            <h1 className="user-un">
               {this.props.currentUser.username}
             </h1>
-            <h3 className="User-Desc">
+            <h3 className="user-desc">
               {this.props.currentUser.description}
             </h3>
           </div>

@@ -9,7 +9,7 @@
 ua = User.create({
     username: "Guest",
     password: "asd123",
-    description:"Hello world, I am a professional photographer",
+    description:"Hello world, I am a Professional Photographer for hire!",
     email: "guestdemo@helper.com",
     cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--JlV88ebH--/v1490056565/Desktop-download-california-wallpapers-HD_ddmmy2.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/s--OY9oInfN--/v1490065061/3331467084_13b583b888_b_z2u2rx.jpg"
@@ -18,7 +18,7 @@ ua = User.create({
 ub = User.create({
     username: "JoannesPhilippe",
     password: "asd123",
-    description:"Bonjour friends",
+    description:"Bonjour Friends",
     email: "Jaonnes@helper.com",
     cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--cU3EUKJ1--/v1490055906/f9ff137a00dfac3af502bdb75cf9555d_fgjbff.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489786686/images_fyh3rz.jpg"
@@ -36,7 +36,7 @@ uc = User.create({
 ud = User.create({
     username: "KenWong",
     password: "asd123",
-    description:"Hello all, see my pictures.",
+    description:"Hello all, come see my pictures.",
     email: "Ken@helper.com",
     cover_photo_url:"http://res.cloudinary.com/nightstock/image/upload/s--S1CgtX3K--/c_scale,h_1080/v1490056971/RtobAkb_hpmler.jpg",
     user_image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489788429/600_432702483_gu6ooz.jpg"
@@ -79,7 +79,7 @@ pa = Post.create({
 
 
 pb = Post.create({
-    title: "Drinks palette",
+    title: "Drinks Palette",
     description: "Night in the town!",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489788913/Bars-in-Al-Nahda-Dubai_s4hiss.jpg",
@@ -88,7 +88,7 @@ pb = Post.create({
 
 
 pc = Post.create({
-    title: "Merry go round and round",
+    title: "Merry goes Around",
     description: "Round and round until we see the sun!",
     location: "Berlin, Germany",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489788936/1_wsm4co.jpg",
@@ -96,16 +96,16 @@ pc = Post.create({
   })
 
 pd = Post.create({
-    title: "Busy streets",
-    description: "Metro life is something else",
+    title: "Busy Streets",
+    description: "Metro life is something else...",
     location: "Hong Kong, Japan",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489788996/1.jpg_v89btn.jpg",
     user_id: 4
   })
 
 pe = Post.create({
-    title: "Ride along",
-    description: "Options are always present",
+    title: "Ride Along",
+    description: "Options are always present!",
     location: "New York City, New York, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489789021/scenic_bicycle_1920x1080_ykiiuh.jpg",
     user_id: 7
@@ -113,8 +113,8 @@ pe = Post.create({
 
 
 pf = Post.create({
-    title: "Fog in lights",
-    description: "NYC at dusk",
+    title: "Fog in lights...",
+    description: "NYC at dusk.",
     location: "New York City, New York, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489789045/New-York-by-Night_lz7kod.jpg",
     user_id: 7
@@ -123,7 +123,7 @@ pf = Post.create({
 
 pg = Post.create({
     title: "Life in the Metro",
-    description: "Night time is a wonder",
+    description: "Night time is a wonder.",
     location: "Honk Kong, Japan",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489789142/433e319ee49f89edc49f080e0d304737_n8hhsh.jpg",
     user_id: 4
@@ -131,8 +131,8 @@ pg = Post.create({
 
 
 ph = Post.create({
-    title: "Water front night lights",
-    description: "Photography is still a wonder",
+    title: "Waterfront lights!",
+    description: "Photography is still a wonder...",
     location: "Chicago, Michigan, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489789163/f6847c936e68db93caa02fa075ea4ba4_wxmb8n.jpg",
     user_id: 5
@@ -150,7 +150,7 @@ pi = Post.create({
 
 pj = Post.create({
     title: "The Tower of Lights",
-    description: "Iconic water front shot",
+    description: "Iconic water front shot.",
     location: "Paris, France",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/s--gmXW2tSu--/c_scale,h_1080/v1489896564/eiffel_tower_paris_night_lights_france_bridge_river_hdr_36870_3840x2160_btmltm.jpg",
     user_id: 2
@@ -158,8 +158,8 @@ pj = Post.create({
 
 
 pk = Post.create({
-    title: "City Life has its moments",
-    description: "Bay Bridge at night",
+    title: "City Life has its Moments",
+    description: "Bay Bridge at Night",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489896833/san-francisco-nightlife_cmdo8o.png",
     user_id: 1
@@ -167,8 +167,8 @@ pk = Post.create({
 
 
 pl = Post.create({
-    title: "Iconic moments are not made overnight",
-    description: "The urban bustle",
+    title: "Iconic moments are not made overnight!",
+    description: "The urban bustle.",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489896932/15674892061_6c1a569151_k-1024x512_rirzve.jpg",
     user_id: 1
@@ -177,7 +177,7 @@ pl = Post.create({
 
 pm = Post.create({
     title: "Palace of Fine Arts and Lights",
-    description: "SF Has its sites",
+    description: "SF Has its sites.",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897025/palace-of-fine-arts_opnadl.jpg",
     user_id: 1
@@ -185,8 +185,8 @@ pm = Post.create({
 
 
 pn = Post.create({
-    title: "Ferry reflection",
-    description: "The ferry building at night",
+    title: "Ferry Reflection",
+    description: "The ferry building at night.",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/s--DR7HtImC--/c_scale,h_1080/v1489897140/san-francisco-streets-at-night-wallpaper-3_eo6tvd.jpg",
     user_id: 1
@@ -195,7 +195,7 @@ pn = Post.create({
 
 po = Post.create({
     title: "Tramway in The City",
-    description: "Public transportation has its moments",
+    description: "Public transportation has its moments.",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897221/tram-sanfrancisco-night-street_yfp732.jpg",
     user_id: 1
@@ -203,8 +203,8 @@ po = Post.create({
 
 
 pp = Post.create({
-    title: "A moment in time",
-    description: "Wine at night is a pleasure in and of itself",
+    title: "A moment in time.",
+    description: "Wine at night is a pleasure in and of itself.",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897354/iStock_000031901936_Small_nufxgx.jpg",
     user_id: 3
@@ -213,7 +213,7 @@ pp = Post.create({
 
 pq = Post.create({
     title: "Twin Peaks is gorgeous!",
-    description: "Twin peaks in a storm",
+    description: "Twin peaks in a storm.",
     location: "San Francisco, California, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897615/maxresdefault_c0wzot.jpg",
     user_id: 3
@@ -221,7 +221,7 @@ pq = Post.create({
 
 
 pr = Post.create({
-    title: "A sight of recovery",
+    title: "A sight of recovery.",
     description: "Chicago is recovering!",
     location: "Chicago, Michigan, USA",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/c_limit,h_1080/v1489898039/Chicago_River_night_3_nonc1v.jpg",
@@ -230,8 +230,8 @@ pr = Post.create({
 
 
 ps = Post.create({
-    title: "Sometimes, public views have their special appeal",
-    description: "Berlin's iconic tower at night",
+    title: "Sometimes, public views have their special appeal.",
+    description: "Berlin's iconic tower at night.",
     location: "Berlin, Germany",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897962/The-Fernsehturm-Tower-In-Alexanderplatz-Berlin-At-Night_devdbd.jpg",
     user_id: 6
@@ -239,8 +239,8 @@ ps = Post.create({
 
 
 pt = Post.create({
-    title: "Berlin is colorful",
-    description: "Night life in Europe is wonderful",
+    title: "Berlin is Colorful",
+    description: "Night life in Europe is wonderful!",
     location: "Berlin, Germany",
     image_url: "http://res.cloudinary.com/nightstock/image/upload/v1489897884/katerholzig_mku7h5.jpg",
     user_id: 6

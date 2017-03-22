@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import GreetingContainer from './greeting/greeting_container';
 
@@ -8,10 +9,10 @@ const App = ({ children }) => (
       <source src="https://d1235ca2z646oc.cloudfront.net/videos/processed/4726/BnW.mp4.mp4" type="video/webm" />
     </video>
     <header>
-      <a href="/">
+      <Link to="/" className="anchors">
         <img className="Auth-NSLogo"  src="http://res.cloudinary.com/nightstock/image/upload/v1489772788/jkzhpkvnzojqolfyyaeu.png" alt="Moon Logo" />
         <h1>NightStock</h1>
-      </a>
+      </Link>
       <GreetingContainer />
     </header>
     { children }

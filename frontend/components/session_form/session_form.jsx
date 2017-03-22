@@ -82,13 +82,13 @@ class SessionForm extends React.Component {
 		if (this.state.modalType === "sign-in") {
 			return (
         <button className="sign-form-b navLink" onClick={this.openModal.bind(this, 'sign-up')}>
-          Sign-Up Now!
+          Sign-Up!
         </button>
       );
 		} else {
 			return (
         <button className="sign-form-b navLink" onClick={this.openModal.bind(this, 'sign-in')}>
-          Sign-In Instead!
+          Sign-In!
         </button>
       );
 		}

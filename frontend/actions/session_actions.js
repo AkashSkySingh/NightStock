@@ -1,3 +1,4 @@
+import { hashHistory } from 'react-router';
 import * as SessionAPIUtil from '../util/session_api_util';
 
 export const SIGNIN = "SIGNIN";
@@ -20,7 +21,7 @@ export const signin = user => dispatch => (
 );
 
 export const signout = () => dispatch => (
-  SessionAPIUtil.signout().then(user => dispatch(receiveCurrentUser(null)))
+  SessionAPIUtil.signout().then(user => dispatch(receiveCurrentUser(null))).then(hashHistory.push("/"))
 );
 
 export const receiveCurrentUser = currentUser => ({

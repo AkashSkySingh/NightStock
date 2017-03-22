@@ -23,7 +23,7 @@ const customStyles = {
     color                 : 'white',
     backgroundColor       : 'rgba(0, 0, 0, 0.9)',
     width                 : '250px',
-    height                : '400px',
+    height                : '320px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
@@ -41,14 +41,38 @@ class PostShow extends React.Component {
     super(props);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.creatorDetails = this.creatorDetails.bind(this);
+    this.creatorButtons = this.creatorButtons.bind(this);
     this.state = {
       modalOpen: false,
-      modalType: 'edit'
+      modalType: 'edit',
+      title: this.props.post.title,
+      description: this.props.post.description,
+      location: this.props.post.location,
+      user_id: this.props.post.user_id,
+      image_url: this.props.post.image_url
     };
   }
 
   componentDidMount() {
     this.props.fetchPost(this.props.params.postId);
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.setState(newProps.post);
+  }
+
+  update(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.updatePost(this.state);
+    this.closeModal();
   }
 
   openModal() {
@@ -59,33 +83,102 @@ class PostShow extends React.Component {
 
   closeModal(){
     this.setState({
-      modalOpen: false,
-      modalType: 'new'
+      modalOpen: false
     });
   }
 
+  creatorDetails(){
+    if (this.props.post.user){
+      return (
+
+          <Link className="post-show-user-details" to={`users/${this.props.post.user.user_id}`}>
+            <h2 className="post-show-user-by">By:</h2>
+            <img src={this.props.post.user.user_image_url} className="post-show-user-img"/>
+            <h2 className="post-show-user-un" >{this.props.post.user.username}</h2>
+          </Link>
+
+      );
+    }
+  }
+
+  creatorButtons(){
+    if (this.props.post.user){
+      if (this.props.post.user.user_id === this.props.currentUser.id){
+        return (
+          <div className="post-show-buttons">
+            <button className="post-show-b" onClick={()=>this.openModal()}>Edit Post</button>
+          </div>
+        );
+      }
+    }
+  }
+
+
   render () {
-
-
     const post = this.props.post;
 
     return (
-      <div className="Middle">
-        <div className="Post-Show">
-          <h1>{post.title}</h1>
-          <h2>{post.description}</h2>
-          <h3>Photo taken in {post.location}</h3>
-          <img src={post.image_url} />
-          <button onClick={()=>this.props.deletePost(post.id)}>Delete Post</button>
-          <button onClick={()=>this.openModal()}>Edit Post</button>
+      <div className="middle">
+        <div className="post-show">
+          <img className="post-show-img" src={post.image_url} />
+          <div className="post-show-details">
+            <h1 className="post-show-title">
+              {post.title}
+            </h1>
+            {this.creatorDetails()}
+            <div className="post-show-buttonloc">
+              {this.creatorButtons()}
+              <h4 className="post-show-loc">
+                Photo taken in:
+                <br />
+                {post.location}
+              </h4>
+            </div>
+            <h3 className="post-show-desc">
+              {post.description}
+            </h3>
+          </div>
         </div>
         <Modal
           contentLabel="Modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
           style={customStyles}>
-          
-          <button className="show-form-b" onClick={this.closeModal.bind(this)}>Cancel</button>
+
+          <h3 className="post-form-title">
+            Update Post
+          </h3>
+
+          <form className="post-form" onSubmit={this.handleSubmit}>
+
+            <br />
+            <label>Title:
+              <input
+                type="text"
+                value={this.state.title}
+                onChange={this.update('title')} />
+            </label>
+            <br />
+
+            <label>Location:
+              <input
+                type="text"
+                value={this.state.location}
+                onChange={this.update('location')} />
+            </label>
+            <br/>
+
+            <label>Details:
+              <textarea
+                value={this.state.description}
+                onChange={this.update('description')} />
+            </label>
+            <br/>
+
+              <br/>
+              <input className="post-form-b" type="submit" value="Update Post" />
+              <button className="post-form-b" onClick={()=>this.props.deletePost(post.id)}>Delete Post</button>
+            </form>
         </Modal>
       </div>
     );

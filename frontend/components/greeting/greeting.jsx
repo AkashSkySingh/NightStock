@@ -19,11 +19,11 @@ class Greeting extends React.Component {
   personalGreeting(currentUser, signout) {
     return (
       <hgroup>
-        <a href={`api/users/${currentUser.id}`} >
+        <Link className="anchors" to={`api/users/${currentUser.id}`} >
           <img className="header-current-user-img" src={this.props.currentUser.user_image_url} alt="Current User Image"/>
           &nbsp; &nbsp; &nbsp;
           <h2> Hi, {currentUser.username}</h2>
-        </a>
+        </Link>
         <PostFormContainer />
         <button className="sign sign-right-b" onClick={signout}>Sign Out</button>
       </hgroup>
