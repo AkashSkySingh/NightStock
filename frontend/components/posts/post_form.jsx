@@ -51,12 +51,12 @@ class PostForm extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.dropZone = this.dropZone.bind(this);
     this.state = {
-      title: undefined,
-      description: undefined,
-      image_url: undefined,
-      location: undefined,
+      title: "",
+      description: "",
+      image_url: "",
+      location: "",
       user_id: this.props.post.user_id,
-      uploadCloudinaryUrl: undefined,
+      uploadCloudinaryUrl: "",
       modalOpen: false
     };
   }
@@ -70,17 +70,23 @@ class PostForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.modalType === 'new') {
-      this.props.createPost({
-        title: this.state.title,
-        description: this.state.description,
-        image_url: this.state.uploadCloudinaryUrl,
-        location: this.state.location,
-        user_id: this.state.user_id
-      });
-    } else {
-      this.props.updatePost(this.state);
-    }
+
+    Object.keys(this.state).map(
+      (key) => {
+        if (this.state[key] === ""){
+          this.state[key] = undefined;
+        }
+      }
+    );
+
+    this.props.createPost({
+      title: this.state.title,
+      description: this.state.description,
+      image_url: this.state.uploadCloudinaryUrl,
+      location: this.state.location,
+      user_id: this.state.user_id
+    });
+
     this.closeModal();
   }
 
@@ -97,10 +103,6 @@ class PostForm extends React.Component {
                         .field('file', file);
 
     upload.end((err, response) => {
-      if (err) {
-
-      }
-
       if (response.body.secure_url !== '') {
         this.setState({
           uploadCloudinaryUrl: response.body.secure_url
@@ -118,15 +120,15 @@ class PostForm extends React.Component {
   closeModal(){
     this.setState({
       modalOpen: false,
-      title: undefined,
-      description: undefined,
-      location: undefined,
-      uploadCloudinaryUrl: undefined
+      title: "",
+      description: "",
+      location: "",
+      uploadCloudinaryUrl: ""
     });
   }
 
   dropZone() {
-    if (this.state.uploadCloudinaryUrl !== undefined){
+    if (this.state.uploadCloudinaryUrl !== ""){
       return (
         <div className="DZone" >
           <img className="post-form-preview-image" src={this.state.uploadCloudinaryUrl} />

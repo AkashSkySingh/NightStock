@@ -19,7 +19,7 @@ class Greeting extends React.Component {
   personalGreeting(currentUser, signout) {
     return (
       <hgroup>
-        <Link className="anchors" to={`api/users/${currentUser.id}`} >
+        <Link className="anchors" to={`/users/${currentUser.id}`} >
           <img className="header-current-user-img" src={this.props.currentUser.user_image_url} alt="Current User Image"/>
           &nbsp; &nbsp; &nbsp;
           <h2> Hi, {currentUser.username}</h2>

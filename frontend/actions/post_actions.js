@@ -37,7 +37,7 @@ export const updatePost = post => dispatch => {
 };
 
 export const createPost = post => dispatch => {
-  return PostApiUtil.createPost(post).then(post => dispatch(receivePost(post)));
+  return PostApiUtil.createPost(post).then(post => dispatch(receivePost(post))).then(hashHistory.push(`/posts/${post.id}`));
 };
 
 export const deletePost = id => dispatch => {

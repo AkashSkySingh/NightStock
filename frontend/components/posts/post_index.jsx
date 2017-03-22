@@ -1,8 +1,6 @@
 import React from 'react';
 import { hashHistory, withRouter, Link } from 'react-router';
 import Masonry from 'react-masonry-component';
-import PostIndexItem from './post_index_item';
-import Modal from 'react-modal';
 
 const masonryOptions = {
   transition: 0
@@ -20,7 +18,6 @@ class PostIndex extends React.Component {
 
 
   render () {
-
     let childElements = this.props.posts.map( (post) => {
       return (
         <li key={post.id} >

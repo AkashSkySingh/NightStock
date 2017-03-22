@@ -22,11 +22,11 @@ class Splash extends React.Component {
       <div className="middle">
         <div className="wrap" >
           <h1 className="splash-text">
-            A look into night-life from around the world.
+            Night-life photography from around the world.
           </h1>
           <h3 className="splash-text">
-            Come see what night elsewhere is like. &nbsp;&nbsp;
-            <button className="splash-demo-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
+            See night time from different perspectives! &nbsp;&nbsp;
+            <button className="splash-demo-b" onClick={(e) => this.loadDemoUser(e)}>Click for Demo</button>
           </h3>
         </div>
       </div>

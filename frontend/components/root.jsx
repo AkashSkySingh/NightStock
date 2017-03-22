@@ -7,6 +7,7 @@ import App from './app';
 import PostIndexContainer from './posts/post_index_container';
 import PostShowContainer from './posts/post_show_container';
 import SplashContainer from './splash_page/splash_container';
+import UserShowContainer from './user_page/user_show_container';
 
 const Root = ({ store }) => {
 
@@ -31,7 +32,8 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={SplashContainer} />
-          <Route path="/posts/:postId" component={PostShowContainer} onEnter={_ensureSignedIn()}/>
+          <Route path="/posts/:postId" component={ PostShowContainer } />
+          <Route path="/users/:userId" component={ UserShowContainer } />
         </Route>
       </Router>
     </Provider>
@@ -39,5 +41,3 @@ const Root = ({ store }) => {
 };
 
 export default Root;
-
-// <Route path="/users/:userId" component={ UserPage } />
