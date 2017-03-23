@@ -23,7 +23,7 @@ export const fetchesPost = id => dispatch => {
 
 export const updatesPost = post => dispatch => {
   return PostDetailApiUtil.updatesPost(post)
-  .then(post => dispatch(receivesPost(post)),
+    .then(post => dispatch(receivesPost(post)),
     err => dispatch(receiveErrors(err.responseJSON)));
 };
 

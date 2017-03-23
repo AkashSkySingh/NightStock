@@ -17,8 +17,8 @@ const SessionReducer = (state = _nullUser, action) => {
         currentUser
       });
     case RECEIVE_POST:
-      let currentUserUpdated = merge({}, state.currentUser.posts, {[state.currentUser.posts.length]: action.post});
       debugger;
+      let currentUserUpdated = merge({}, state.currentUser.posts, {[state.currentUser.posts.length]: action.post});
       return merge({}, state, { currentUser: {posts:  currentUserUpdated } });
     case SIGNOUT:
       return merge({}, _nullUser);

@@ -61,7 +61,6 @@ class PostForm extends React.Component {
     };
   }
 
-
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
@@ -86,8 +85,6 @@ class PostForm extends React.Component {
       location: this.state.location,
       user_id: this.state.user_id
     });
-
-    this.props.clearErrors();
   }
 
   onImageDrop(files) {
@@ -115,7 +112,7 @@ class PostForm extends React.Component {
     this.setState({
       modalOpen: true
     });
-    this.props.clearErrors();
+
   }
 
   closeModal(){
@@ -126,7 +123,7 @@ class PostForm extends React.Component {
       location: "",
       uploadCloudinaryUrl: ""
     });
-    this.props.clearErrors();
+
   }
 
   dropZone() {
@@ -165,7 +162,6 @@ class PostForm extends React.Component {
 	}
 
   render () {
-
     return (
       <div>
         <nav >

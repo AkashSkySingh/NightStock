@@ -7,7 +7,6 @@ export const RECEIVE_POST = "RECEIVE_POST";
 export const REMOVE_POST = "REMOVE_POST";
 
 export const receivePost = (post) => {
-  debugger;
   return ({
     type: RECEIVE_POST,
     post
@@ -37,15 +36,13 @@ export const updatePost = post => dispatch => {
   .then(post => dispatch(receivePost(post)));
 };
 
-export const createPost = post => dispatch => (
-  PostApiUtil.createPost(post)
-    .then(createdPost => {
-      return (
-        dispatch(receivePost(createdPost)),
-        err => dispatch(receiveErrors(err.responseJSON))
-    );
-  })
-);
+export const createPost = post => dispatch => {
+  return PostApiUtil.createPost(post)
+    .then(createdPost => dispatch(receivePost(createdPost)),
+    err => dispatch(receiveErrors(err.responseJSON)));
+};
+
+
 // hashHistory.push(`/posts/${createdPost.id}`);
 
 export const deletePost = id => dispatch => {
