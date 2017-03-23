@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 import PostIndexContainer from '../posts/post_index_container';
 
+const divStyle = (imgUrl) => ({
+  color: 'black',
+  backgroundImage: 'url(' + imgUrl + ')',
+});
+
 
 class Splash extends React.Component {
   constructor(props){
@@ -32,6 +37,7 @@ class Splash extends React.Component {
       </div>
     );
   }
+
 
   centerSignedIn (){
     return (

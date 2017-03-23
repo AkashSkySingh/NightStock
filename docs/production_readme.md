@@ -6,66 +6,122 @@
 
 NightStock is a full-stack web application inspired by 500px.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend via ES6.
 
+![image of Root page](wireframes/RootPage.png)
+
+
 ## Features & Implementation
 
 ### React Wonder
-NightStock is truly a single-page, React-based web application, partly due to the way it passes <tt> state and store </tt> with selective information. Additionally, the combination of front-end and backend provides an effective, but easy user interface without errors.
+NightStock is truly a single-page, React-based web application, partly due to the way it passes <tt> state and store </tt> with an abundance of information to continually feed the front-end components. Additionally, the combination of front-end and backend provides an effective, but easy user interface without errors.
 
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "guest"
+  errors: [],
+  postDetail: {
+    description: "post description",
+    id: "post's id",
+    image_url: "post.com/post",
+    location: "post, post, usa",
+    title: "post title",
+    user: {
+      user_id: "poster's id",
+      user_image_url: "poster.com/poster",
+      username: "poster's username"
+    }
   },
   posts: {
-    1: {
-      title: "Sample State",
-      description: "Is good to plan",
-      user_id: 1,
-      location: "San Francisco",
-      tags: {
-        1: {
-          id: 1,
-          name: "Cold"
-        }
+    0: {
+      description: "post description",
+      id: "post's id",
+      image_url: "post.com/post",
+      location: "post, post, usa",
+      title: "post title",
+      user: {
+        user_id: "poster's id",
+        user_image_url: "poster.com/poster",
+        username: "poster's username"
       }
+    },
+    1: {
+      ...
     }
   },
-  postDetail: {
-    1: {
-      title: "Sample State",
-      user_id: 1,
-      tags: {
+  session: {
+    currentUser: {
+      cover_photo_url: "cover.com/cover",
+      description: "currentUser's description",
+      id: "currentUser's id",
+      posts : [
+        0: {
+          description: "post description",
+          id: "post's id",
+          image_url: "post.com/post",
+          location: "post, post, usa",
+          title: "post title",
+          user: {
+            user_id: "poster's id",
+            user_image_url: "poster.com/poster",
+            username: "poster's username"
+          }
+        },
         1: {
-          id: 1,
-          name: "Cold"
+          ...
         }
-      }
+      ]
     }
-  },
-  userDetail: {
-    id: 1,
-    username: "Guest",
-    description: "Sample Description"
   }
-  tagFilters: [1, 7, 14] // Used to track selected Tags for filtering of posts
+  userDetail: {
+    cover_photo_url: "cover.com/cover",
+    description: "currentUser's description",
+    id: "currentUser's id",
+    posts : [
+      0: {
+        description: "post description",
+        id: "post's id",
+        image_url: "post.com/post",
+        location: "post, post, usa",
+        title: "post title",
+        user: {
+          user_id: "poster's id",
+          user_image_url: "poster.com/poster",
+          username: "poster's username"
+        }
+      },
+      1: {
+        ...
+      }
+    ]
+  }
 }
 ```
 
+### User Authorization
+Throughout the site, the session controller will manage the User's authorization only allowing certain actions if there is a current user. Signing in, up, and out of the site is allowed by an modal interaction. Post sign-in, a user will always have access to signing out of the site from the navbar. Errors in either signing in or up will be displayed at the bottom of the modal.
+
+![image of Signin Form](wireframes/Signin.png)
+![image of Signup Form](wireframes/Signup.png)
+
+
 ### Profile Page
-NightStock's profile page serves as a user hub. Customization is reliant on the backend passing information such as <tt> current_user posts, description, interaction, cover_photo, user_img, and other </tt> necessary information. This makes each page different than the last.
+NightStock's profile page serves as a user hub. Customization is reliant on the backend passing information such as <tt> current_user posts, description, interaction, cover_photo, user_img, and other </tt> necessary information. This makes each page different than the last. Primarily using the same views, different cuts of information is typically used in the user show pages. From the sample state, the backend provides information via a route to the selected user. From there, the front end uses the userDetail portion of the sample state to render the proper information regarding the selected user. Each page presents the various information about the selected user, along with their created posts organized via a Masonry table from most recent to their primary post.
 
 ![image of Profile Page](wireframes/ProfilePage.png)
 
 
 ### Post CRUD (Create/Read/Update/Delete)
-Post interaction is simplistic, yet effective. To promote user interaction, posts will allow for users to follow and comment, allowing for notification feeds. All of this is possible due to the backend database managing <tt>post description, title, user comments, follows, and other</tt> relevant information to generate each individual post modal.
+Post interaction is simplistic, yet effective. <tt>Posts can be created via a modal available on any part of the page from the navigation bar. An event click handler will allow for the current user to generate a post, while using the CloudinaryAPI to host the image.</tt> Errors for each form will be displayed on the bottom of the modal.
+
+![image of Post Create Form](wireframes/Createpost.png)
+![image of Post Create Form](wireframes/Updatepost.png)
+
+
+The posts' themselves will be rendered on an individual show page, or via a masonry table for the homefeed. Only the post creator can edit or delete the post via dispatched methods attached to the properties being passed to the respective component. The validations in the backend will prevent a user from creating or updating a post with a null <tt>title, location, or image_url</tt> in the case of the image url being sent from the CloudinaryAPI once an image is uploaded to the form via the React-DropZone component.
 
 ![image of Post](wireframes/PostShow.png)
 
 
 ### Home Feed & Follows
-The Home Feed page and its relative containers serve as the backdrop for cross-user interaction. Users can follow other users, while infinitely scrolling to access more followed material.
+The Home Feed page and its relative containers serve as the backdrop for cross-user interaction. Users can follow other users, while scrolling via a Masonry table to access more followed material. Again, the most recent image will be provided on the upper parts of the page, while older posts will be followed. All of this will be based on the <tt> post id </id>, therefore removing the necessity to deal with dates or upload times.
 
 ![image of Home Feed](wireframes/HomeFeed.png)
 
@@ -76,7 +132,7 @@ In addition to the features already implemented, I plan to continue work on this
 
 ### Search by location
 
-Although not a basic feature of 500px, I plan to create a unique discover page based off of a combination of search via posts based on location, and render those specific locations to a Google map. All under the premise to entice users to find relevant night life activities around their location, and potentially add more posts to the site following suit of a desired location for content.
+Although not a basic feature of 500px, I plan to create a unique discover page based off of a combination of search via posts based on location, and render those specific locations to a Google map. All under the premise to entice users to find desired night time activities around their location, and potentially add more posts to the site following suit of a desired location for content.
 
 ### Cross-User Interaction
 
@@ -85,3 +141,8 @@ Just like 500px, I plan to introduce a commenting functionality to NightStock. I
 ### APIs
 - Cloudinary
 - Bonus: GoogleMapsAPI
+
+### React Libraries
+- React-DropZone
+- React-Modal
+- Masonry

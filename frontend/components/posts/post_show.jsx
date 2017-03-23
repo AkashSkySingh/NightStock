@@ -23,11 +23,10 @@ const customStyles = {
     color                 : 'white',
     backgroundColor       : 'rgba(0, 0, 0, 0.9)',
     width                 : '250px',
-    height                : '440px',
+    height                : '400px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
-    justifyContent        : 'space-between',
     padding               : '20px',
     fontFamily            : 'Lato, san-serif',
     border                : '2px solid rgb(204, 204, 204)',
@@ -73,6 +72,7 @@ class PostShow extends React.Component {
     e.preventDefault();
     this.props.updatesPost(this.state);
     this.props.clearErrors();
+    this.closeModal();
   }
 
   openModal() {

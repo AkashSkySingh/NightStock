@@ -37,10 +37,12 @@ Run this command in the Terminal from within your repo's root directory,
   alias hberdbrb="heroku run bundle exec rake db:rollback"
   alias hberdbsd="heroku run bundle exec rake db:seed"
   alias hgaa="git add ."
-  alias hgca="heroku git:clone -a"
+  alias hgc="heroku git:clone -a"
   alias hgcm="git commit -am"
   alias hgp="git push heroku master"
+  alias hl='heroku login'
   alias ho="heroku open"
+  alias npmi='npm install'
   alias r='rails'
   alias rc='rails c'
   alias rg='rails generate'

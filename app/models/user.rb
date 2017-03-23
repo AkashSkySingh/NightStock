@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  has_many :followers,
+    through: :follows,
+    source: :followee
+
+  has_many :followees,
+    through: :follows,
+    source: :follower
+
   after_initialize :ensure_session_token
 
   attr_reader :password
