@@ -31,6 +31,16 @@ Run this command in the Terminal from within your repo's root directory,
   alias gpf='git push -f'
   alias gpr='git pull --rebase'
   alias gs='git status'
+  alias hdbr="heroku pg:reset DATABASE_URL"
+  alias hberdbc="heroku run bundle exec rake db:create"
+  alias hberdbm="heroku run bundle exec rake db:migrate"
+  alias hberdbrb="heroku run bundle exec rake db:rollback"
+  alias hberdbsd="heroku run bundle exec rake db:seed"
+  alias hgaa="git add ."
+  alias hgca="heroku git:clone -a"
+  alias hgcm="git commit -am"
+  alias hgp="git push heroku master"
+  alias ho="heroku open"
   alias r='rails'
   alias rc='rails c'
   alias rg='rails generate'
