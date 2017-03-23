@@ -16,7 +16,7 @@ export const signout = user => (
 export const signup = user => {
   return $.ajax({
     method: "POST",
-    url:"api/user",
+    url:"api/users",
     data: { user }
   });
 };

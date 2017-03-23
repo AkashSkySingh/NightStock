@@ -1,5 +1,6 @@
 import * as PostDetailApiUtil from '../util/post_detail_api_util';
 import { hashHistory } from 'react-router';
+import { receiveErrors } from './session_actions';
 
 export const RECEIVES_POST = "RECEIVES_POST";
 export const REMOVES_POST = "REMOVES_POST";
@@ -22,7 +23,8 @@ export const fetchesPost = id => dispatch => {
 
 export const updatesPost = post => dispatch => {
   return PostDetailApiUtil.updatesPost(post)
-  .then(post => dispatch(receivesPost(post)));
+  .then(post => dispatch(receivesPost(post)),
+    err => dispatch(receiveErrors(err.responseJSON)));
 };
 
 export const deletesPost = id => dispatch => {

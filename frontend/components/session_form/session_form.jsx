@@ -48,6 +48,7 @@ class SessionForm extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.loadDemoUser = this.loadDemoUser.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -68,7 +69,6 @@ class SessionForm extends React.Component {
     } else {
       this.props.signup(this.state);
     }
-
     this.props.clearErrors();
 	}
 

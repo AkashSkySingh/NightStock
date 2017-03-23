@@ -29,7 +29,7 @@ const customStyles = {
     color                 : 'white',
     backgroundColor       : 'rgba(0, 0, 0, 0.9)',
     width                 : '250px',
-    height                : '530px',
+    height                : '730px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
@@ -87,7 +87,7 @@ class PostForm extends React.Component {
       user_id: this.state.user_id
     });
 
-    this.closeModal();
+    this.props.clearErrors();
   }
 
   onImageDrop(files) {
@@ -115,6 +115,7 @@ class PostForm extends React.Component {
     this.setState({
       modalOpen: true
     });
+    this.props.clearErrors();
   }
 
   closeModal(){
@@ -125,6 +126,7 @@ class PostForm extends React.Component {
       location: "",
       uploadCloudinaryUrl: ""
     });
+    this.props.clearErrors();
   }
 
   dropZone() {
@@ -210,7 +212,12 @@ class PostForm extends React.Component {
               <button className="post-form-b" onClick={this.closeModal}>Cancel</button>
             </div>
           </form>
+
           <br />
+          <div className="errors-box">
+            {this.renderErrors()}
+          </div>
+
         </Modal>
       </div>
     );

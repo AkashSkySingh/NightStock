@@ -23,7 +23,7 @@ const customStyles = {
     color                 : 'white',
     backgroundColor       : 'rgba(0, 0, 0, 0.9)',
     width                 : '250px',
-    height                : '320px',
+    height                : '440px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
@@ -72,19 +72,21 @@ class PostShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updatesPost(this.state);
-    this.closeModal();
+    this.props.clearErrors();
   }
 
   openModal() {
     this.setState({
       modalOpen: true
     });
+    this.props.clearErrors();
   }
 
   closeModal(){
     this.setState({
       modalOpen: false
     });
+    this.props.clearErrors();
   }
 
   creatorDetails(){
@@ -99,6 +101,18 @@ class PostShow extends React.Component {
 
       );
     }
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   creatorButtons(){
@@ -181,6 +195,10 @@ class PostShow extends React.Component {
               <input className="post-form-b" type="submit" value="Update Post" />
               <button className="post-form-b"  onClick={()=>this.props.deletesPost(post.id)}>Delete Post</button>
             </form>
+          <br />
+          <div className="errors-box">
+            {this.renderErrors()}
+          </div>
         </Modal>
       </div>
     );
