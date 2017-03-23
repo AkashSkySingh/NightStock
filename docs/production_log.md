@@ -24,18 +24,23 @@ Began phase 2 generation of posts, relevant routes, and necessary database imple
 Came to understanding that post CRUD development requires either splash page or user page implemented to test post generation and edit. Splash page container and layout ready for Masonry introduction. Adequate seeding accomplished.
 
 #### Day 5 & 6 (Weekend):
-- [ ] Review 422 status codes on the PostsController
-
-- [ ] Finish implementation of Masonry and JBuilder
-
 
 Post creation and deletion function as intended. Pictures are uploaded on posts to backend as well as Cloudinary API. Resorted to the use of React-Dropzone for added custom design, and easier implementation. Splash page is well underway, as well as HomeFeed. Use of JBuilder will help implement the necessary feeds for both pages once Masonry is working. Modal is set up for implementation in conjunction with Masonry to allow for edits and bonus features. Overall, although not finished with phase 2 entirely due to difficulties, phase 3 and 5 are well underway to completion.
 
 ### Phase 3: User Profile Page (2 Days, W2 T)
 **Objective:** User profile page displays all of user's posts and user's details.
 
+#### Day 7:
+Finished implementing Masonry table but ran into issues with combination of Modal library with Masonry library. Made headway into generating proper Splash pages. Biggest issue of the day was improper mounting/unmounting, or lack-there-of with Masonry table in Splash container. Index conditional did not allow for unmounting and mounting of masonry. Requires additional redux cycle and respective unique path to properly setup. Attempted to create hover items for masonry table, but margin shifting disrupts page generation. Easier to implement hover over box shadows to increase user interaction.
+
+#### Day 8:
+Finished post show page with further development in homefeed. Homefeed page will be the structure for user show pages once post CRUD is complete and ready for proper rendering. Day ended with complete post CRUD and beginning phases of proper user show page development. Better understanding of Masonry and redux cycle allowed for a faster implementation of specified redux cycle for Post pages. Similar design pattern to finish user show pages.
+
 ### Phase 4: Follows (1 Days, W2 W)
 **Objective:** User's page lists all followers and followees with interactive UI.
+
+#### Day 9:
+Completed user show page with working form error generation. Homefeed is currently working properly, just awaiting the implementation of follows to then reference the join table to properly generate the adequate feed. Most significant error of day was the issue of improper error handling. Typos and positioning of code itself was the cause. Additional errors resulting from double-y nested routes/requests in similar reducers. Adjusted names and made separate for each container. Also adjusted the errors given when navigating through site. Only known error left is the flattening error arisen when generating an empty form. However, proper response is fed to user via modal.
 
 ### Phase 5: Home Feed (1 day, W2 Th 6pm)
 **Objective:** Displays all photos uploaded by users followed by current user.
