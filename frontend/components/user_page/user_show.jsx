@@ -6,6 +6,11 @@ const masonryOptions = {
   transition: 0
 };
 
+const divStyle = (imgUrl) => ({
+  color: 'black',
+  backgroundImage: 'url(' + imgUrl + ')',
+});
+
 class UserShow extends React.Component {
   constructor(props){
     super(props);
@@ -50,25 +55,39 @@ class UserShow extends React.Component {
   render(){
     let userDetail = this.props.userDetail;
 
-    return (
-      <div className="middle">
-        <div className="user-show" >
-          <div className="user-imgs">
-            <img className="user-cp" src={userDetail.cover_photo_url} />
-            <img className="user-up" src={userDetail.user_image_url} />
+    if (this.props.userDetail.posts){
+      return (
+        <div className="middle">
+          <div className="user-show" >
+            <div className="user-imgs" style={divStyle(userDetail.cover_photo_url)}>
+              <img className="user-up" src={userDetail.user_image_url} />
+              <div className="user-texts" >
+                <h1 className="user-un">
+                  {userDetail.username}
+                </h1>
+                <h3 className="user-desc user-descrip">
+                  {userDetail.description}
+                </h3>
+                <div className="user-show-details">
+                  <h3 className="user-desc">
+                    {`Posts: ${userDetail.posts.length}`}
+                  </h3>
+                  <h3 className="user-desc">
+                    {`Following: 2`}
+                  </h3>
+                  <h3 className="user-desc">
+                    {`Followers: 7`}
+                  </h3>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="user-texts" >
-            <h1 className="user-un">
-              {userDetail.username}
-            </h1>
-            <h3 className="user-desc">
-              {userDetail.description}
-            </h3>
-          </div>
+          {this.masonry()}
         </div>
-        {this.masonry()}
-      </div>
-    );
+      );
+    } else {
+      return <div className="Middle"></div>;
+    }
   }
 }
 

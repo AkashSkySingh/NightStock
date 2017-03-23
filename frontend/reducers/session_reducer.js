@@ -1,7 +1,7 @@
 
 import { RECEIVE_CURRENT_USER, SIGNOUT } from '../actions/session_actions';
 import merge from 'lodash/merge';
-import { RECEIVE_POST} from '../actions/post_actions';
+import { RECEIVE_POST, REMOVE_POST } from '../actions/post_actions';
 
 const _nullUser = Object.freeze({
   currentUser: null,
@@ -17,9 +17,12 @@ const SessionReducer = (state = _nullUser, action) => {
         currentUser
       });
     case RECEIVE_POST:
-      debugger;
       let currentUserUpdated = merge({}, state.currentUser.posts, {[state.currentUser.posts.length]: action.post});
       return merge({}, state, { currentUser: {posts:  currentUserUpdated } });
+    case REMOVE_POST:
+      let currentUserUpdates = merge({}, state.currentUser.posts);
+      delete currentUserUpdates[action.post.id];
+      return merge({}, state, { currentUser: {posts:  currentUserUpdates } });
     case SIGNOUT:
       return merge({}, _nullUser);
     default:
