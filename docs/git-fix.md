@@ -36,6 +36,7 @@ Run this command in the Terminal from within your repo's root directory,
   alias hberdbm="heroku run bundle exec rake db:migrate"
   alias hberdbrb="heroku run bundle exec rake db:rollback"
   alias hberdbsd="heroku run bundle exec rake db:seed"
+  alias hbedbhr="heroku pg:reset DATABASE --confirm nightstock; heroku run bundle exec rake db:migrate; heroku run bundle exec rake db:seed"
   alias hgaa="git add ."
   alias hgc="heroku git:clone -a"
   alias hgcm="git commit -am"

@@ -45,5 +45,11 @@ Completed user show page with working form error generation. Homefeed is current
 ### Phase 5: Home Feed (1 day, W2 Th 6pm)
 **Objective:** Displays all photos uploaded by users followed by current user.
 
+#### Day 10:
+Attempted to start follows mvp. Held in space due to errors and cross functionality issues with previous resolutions to bugs and glitches. Overall errors cleared. Create post promise fails to render proper amounts of errors while remaining functional. Root cause understood, just establishing proper connection is difficult amongst given state. Follows underway, homefeed altered to drop details box, whereas details box moved to respective user show pages where it works perfectly as expected as subscribed items are re-rendered on action.
+
 ### Phase 6: Clean-Up (1 day, W2 F 6pm)
 **Objective:** Clean-up site and iron out potential bugs/issues.
+
+#### Day 11:
+Day entirely spent on making functional follow state and respective button/component. Working item will make it rendered on the proper state, and show in the proper bar with user show. Project expected to be completed, if not considered complete with mvps today.
