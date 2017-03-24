@@ -501,8 +501,7 @@ footer ul li p {
 
 .user-up {
   width: 100%;
-  max-width: 200px;
-  max-height: 400px;
+  max-width: 175px;
   border-radius: 25px;
   border: 2px solid white;
   background-color: gray;
@@ -550,19 +549,19 @@ footer ul li p {
 }
 
 .follow {
-  background-color: inherit;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .follow:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: inherit;
 }
 
 .unfollow {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: inherit;
 }
 
 .unfollow:hover {
-  background-color: inherit;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .user-descrip {
@@ -582,7 +581,7 @@ footer ul li p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 50px;
+  margin-top: 20px;
   height: 400px;
   margin: 0 auto;
   background-size: cover;
@@ -590,8 +589,7 @@ footer ul li p {
 
 .homefeed-up {
   width: 100%;
-  max-width: 200px;
-  max-height: 400px;
+  max-width: 175px;
   border-radius: 25px;
   border: 2px solid white;
   background-color: gray;

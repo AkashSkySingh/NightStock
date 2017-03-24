@@ -29,20 +29,6 @@ NightStock is truly a single-page, React-based web application, partly due to th
       username: "poster's username"
     }
   },
-  postDetail: {
-    0: {
-      description: "post description",
-      id: "post's id",
-      image_url: "post.com/post",
-      location: "post, post, usa",
-      title: "post title",
-      user: {
-        user_id: "poster's id",
-        user_image_url: "poster.com/poster",
-        username: "poster's username"
-      }
-    }
-  },
   posts: {
     0: {
       description: "post description",
@@ -64,6 +50,14 @@ NightStock is truly a single-page, React-based web application, partly due to th
     currentUser: {
       cover_photo_url: "cover.com/cover",
       description: "currentUser's description",
+      followees: [
+        0: "ID of a user that userDetail is following",
+        1: ...
+      ],
+      followers: [
+        0: "ID of a user following userDetail",
+        1: ...
+      ],
       id: "currentUser's id",
       posts : [
         0: {
@@ -87,6 +81,14 @@ NightStock is truly a single-page, React-based web application, partly due to th
   userDetail: {
     cover_photo_url: "cover.com/cover",
     description: "currentUser's description",
+    followees: [
+      0: "ID of a user that userDetail is following",
+      1: ...
+    ],
+    followers: [
+      0: "ID of a user following userDetail",
+      1: ...
+    ],
     id: "currentUser's id",
     posts : [
       0: {
@@ -117,8 +119,8 @@ Throughout the site, the session controller will manage the User's authorization
 ![image of Signup Form](wireframes/Signup.png)
 
 
-### Profile Page
-NightStock's profile page serves as a user hub. Customization is reliant on the backend passing information such as <tt> current_user posts, description, interaction, cover_photo, user_img, and other </tt> necessary information. This makes each page different than the last. Primarily using the same views, different cuts of information is typically used in the user show pages. From the sample state, the backend provides information via a route to the selected user. From there, the front end uses the userDetail portion of the sample state to render the proper information regarding the selected user. Each page presents the various information about the selected user, along with their created posts organized via a Masonry table from most recent to their primary post.
+### Profile Page and Follows
+NightStock's profile page serves as a user hub. Customization is reliant on the backend passing information such as <tt> current_user posts, description, interaction, cover_photo, user_img, and other </tt> necessary information. This makes each page different than the last. Primarily using the same views, different cuts of information is typically used in the user show pages. From the sample state, the backend provides information via a route to the selected user. From there, the front end uses the userDetail portion of the sample state to render the proper information regarding the selected user. Each page presents the various information about the selected user, along with their created posts organized via a Masonry table from most recent to their primary post. A user's page is the effective inlet for a user to follow or unfollow a viewed user.
 
 ![image of Profile Page](wireframes/ProfilePage.png)
 
@@ -135,8 +137,8 @@ The posts' themselves will be rendered on an individual show page, or via a maso
 ![image of Post](wireframes/PostShow.png)
 
 
-### Home Feed & Follows
-The Home Feed page and its relative containers serve as the backdrop for cross-user interaction. Users can follow other users, while scrolling via a Masonry table to access more followed material. Again, the most recent image will be provided on the upper parts of the page, while older posts will be followed. All of this will be based on the <tt> post id </id>, therefore removing the necessity to deal with dates or upload times.
+### Home Feed
+The Home Feed page and its relative containers serve as the backdrop for cross-user interaction. Users can scroll via a Masonry table to access more followed material of users which are followed. Again, the most recent image will be provided on the upper parts of the page, while older posts will be followed. All of this will be based on the <tt> post id </id>, therefore removing the necessity to deal with dates or upload times.
 
 ![image of Home Feed](wireframes/HomeFeed.png)
 
@@ -144,6 +146,10 @@ The Home Feed page and its relative containers serve as the backdrop for cross-u
 ## Future Directions for the Project
 
 In addition to the features already implemented, I plan to continue work on this project.  The next steps for NightStock are outlined below. Again, the backend ties together various sources of information to seamlessly generate content as a user continues to browse.
+
+### Discover new content
+
+Overall, the Home Feed of a user focuses on users which are being followed at the moment. Therefore, to allow for a user to discover additional content, a discover page/container will be created that allows a user to scroll through content other than what they are following.
 
 ### Search by location
 
