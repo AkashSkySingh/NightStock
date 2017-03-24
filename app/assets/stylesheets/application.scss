@@ -35,18 +35,17 @@ header, a, nav, body, div, form, label, hgroup, footer {
 
 #root {
   position: relative;
-  padding-top: 0px;
-  padding-bottom: 90px;
   min-width: 800px;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+
 }
 
 .middle {
   width: 100%;
   height: 100%;
   vertical-align: middle;
-  padding: 70px 0;
-  max-width: inherit;
-  background-color: rgba(0, 0, 0, .8);
+  margin: 0 auto;
 }
 
 // Site background related CSS
@@ -89,10 +88,11 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .9);
   top: 0;
   position: fixed;
   height: 60px;
+  min-width: 800px;
 }
 
 .anchors {
@@ -157,9 +157,10 @@ div header div hgroup {
 // Footer related CSS
 
 footer {
-  position: absolute;
-  bottom: 2px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  background-color: rgba(0,0,0,0.9);
 }
 
 footer ul {
@@ -169,7 +170,9 @@ footer ul {
   justify-content: space-around;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  background-color: rgba(0,0,0,0.8);
+  margin: 0;
+  padding: 0;
+  min-width: 800px;
 }
 
 footer ul li h4 {
@@ -310,20 +313,22 @@ footer ul li p {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin: 100px auto;
+  margin: 0 auto;
   vertical-align: middle;
   text-align: center;
-  max-width: 900px;
-  padding: 100px;
+  min-width: 800px;
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
 
 
 .post-show-details {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  min-width: 200px;
-  padding-left: 30px;
+  min-width: 260px;
+  padding: 0 20px;
+  margin: auto;
+  max-width: 500px;
 }
 
 .post-show-user-details {
@@ -333,6 +338,7 @@ footer ul li p {
   width: 200px;
   min-width: 100px;
   padding-top: 10px;
+  margin: 0 auto;
 }
 
 .post-show-user-by {
@@ -377,13 +383,15 @@ footer ul li p {
   padding-top: 10px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  margin: 0 auto;
+  min-width: 256px;
 }
 
 .post-show-loc {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   padding-bottom: 10px;
-
+  margin: auto;
 }
 
 .post-show-b {
@@ -400,9 +408,11 @@ footer ul li p {
 
 .post-show-img {
   vertical-align: middle;
-  max-width: 700px;
+  min-width: 470px;
+  max-width: 1000px;
   width: 100%;
   height: 100%;
+  margin: auto;
 }
 
 
@@ -411,9 +421,11 @@ footer ul li p {
 .wrap {
   max-width: 800px;
   vertical-align: middle;
-  padding: 0 20px;
   text-align: left;
-  margin: 360px auto 300px auto;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  margin: auto;
 }
 
 .wrap h1 {
@@ -458,7 +470,8 @@ footer ul li p {
   list-style: none;
   display: flex;
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
+  padding-top: 10px;
 }
 
 .masonry-post {

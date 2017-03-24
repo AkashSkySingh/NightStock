@@ -68,95 +68,189 @@ ug = User.create({
     cover_photo_url:"https://res.cloudinary.com/nightstock/image/upload/s--v2Qr5LHC--/v1490056230/45219919-night-wallpapers_coyztb.jpg",
     user_image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489786795/30996643164_a9c48dcd80_b_keoccv.jpg"
   })
+#
+# uh = User.create({
+#     username: "",
+#     password: "asd123",
+#     description:"",
+#     email: "@helper.com",
+#     cover_photo_url:"",
+#     user_image_url: ""
+#   })
+#
+# ui = User.create({
+#     username: "",
+#     password: "=",
+#     description:"=",
+#     email: "=@helper.com",
+#     cover_photo_url:"",
+#     user_image_url: ""
+#   })
+#
+# uj = User.create({
+#     username: "",
+#     password: "asd123",
+#     description:"",
+#     email: "@helper.com",
+#     cover_photo_url:"",
+#     user_image_url: ""
+#   })
+#
+# uk = User.create({
+#     username: "",
+#     password: "asd123",
+#     description:"",
+#     email: "@helper.com",
+#     cover_photo_url:"",
+#     user_image_url: ""
+#   })
+#
+# ul = User.create({
+#     username: "",
+#     password: "",
+#     description:"",
+#     email: "",
+#     cover_photo_url:"",
+#     user_image_url: ""
+#   })
+#
+# um = User.create({
+#     username: "",
+#     password: "",
+#     description:"",
+#     email: "",
+#     cover_photo_url:"",
+#     user_image_url: ""
+#   })
 
-  fa = Follow.create({
+fa = Follow.create({
+      followee_id: 2,
+      follower_id: 1
+    })
+
+fb = Follow.create({
       followee_id: 3,
       follower_id: 1
     })
 
-  fb = Follow.create({
+fc = Follow.create({
       followee_id: 4,
-      follower_id: 1
-    })
-
-  fc = Follow.create({
-      followee_id: 6,
       follower_id: 1
     })
 
   fd = Follow.create({
-      followee_id: 7,
+      followee_id: 5,
       follower_id: 1
     })
 
   fe = Follow.create({
+      followee_id: 6,
+      follower_id: 1
+    })
+
+  ff = Follow.create({
+      followee_id: 7,
+      follower_id: 1
+    })
+
+  fg = Follow.create({
       followee_id: 5,
       follower_id: 2
     })
 
-  ff = Follow.create({
+  fh = Follow.create({
       followee_id: 6,
       follower_id: 2
     })
 
-  fg = Follow.create({
-      followee_id: 1,
-      follower_id: 3
-    })
-
-  fh = Follow.create({
-      followee_id: 4,
-      follower_id: 3
-    })
-
   fi = Follow.create({
-      followee_id: 6,
+      followee_id: 1,
       follower_id: 3
     })
 
   fj = Follow.create({
-      followee_id: 1,
-      follower_id: 4
+      followee_id: 6,
+      follower_id: 3
     })
 
   fk = Follow.create({
-      followee_id: 7,
+      followee_id: 2,
       follower_id: 4
     })
 
   fl = Follow.create({
-      followee_id: 1,
-      follower_id: 5
+      followee_id: 5,
+      follower_id: 4
     })
 
   fm = Follow.create({
+      followee_id: 7,
+      follower_id: 4
+    })
+
+  fn = Follow.create({
+      followee_id: 4,
+      follower_id: 5
+    })
+
+  fo = Follow.create({
       followee_id: 2,
       follower_id: 5
     })
 
-  fn = Follow.create({
-      followee_id: 1,
-      follower_id: 6
-    })
-
-  fo = Follow.create({
-      followee_id: 3,
-      follower_id: 6
-    })
-
   fp = Follow.create({
-      followee_id: 7,
+      followee_id: 1,
       follower_id: 6
     })
 
   fq = Follow.create({
+      followee_id: 3,
+      follower_id: 6
+    })
+
+  fr = Follow.create({
+      followee_id: 7,
+      follower_id: 6
+    })
+
+  fs = Follow.create({
       followee_id: 1,
       follower_id: 7
     })
 
-  fr = Follow.create({
+  ft = Follow.create({
       followee_id: 2,
       follower_id: 7
+    })
+  #
+  # fu = Follow.create({
+  #     followee_id: ,
+  #     follower_id:
+  #   })
+  #
+  # fv = Follow.create({
+  #     followee_id: ,
+  #     follower_id:
+  #   })
+  #
+  # fw = Follow.create({
+  #     followee_id: ,
+  #     follower_id:
+  #   })
+  #
+  # fx = Follow.create({
+  #     followee_id: ,
+  #     follower_id:
+  #   })
+  #
+  # fy = Follow.create({
+  #     followee_id: ,
+  #     follower_id:
+  #   })
+  #
+  # fz = Follow.create({
+  #     followee_id: ,
+  #     follower_id:
     })
 
 
