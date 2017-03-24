@@ -69,6 +69,97 @@ ug = User.create({
     user_image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489786795/30996643164_a9c48dcd80_b_keoccv.jpg"
   })
 
+  fa = Follow.create({
+      followee_id: 3,
+      follower_id: 1
+    })
+
+  fb = Follow.create({
+      followee_id: 4,
+      follower_id: 1
+    })
+
+  fc = Follow.create({
+      followee_id: 6,
+      follower_id: 1
+    })
+
+  fd = Follow.create({
+      followee_id: 7,
+      follower_id: 1
+    })
+
+  fe = Follow.create({
+      followee_id: 5,
+      follower_id: 2
+    })
+
+  ff = Follow.create({
+      followee_id: 6,
+      follower_id: 2
+    })
+
+  fg = Follow.create({
+      followee_id: 1,
+      follower_id: 3
+    })
+
+  fh = Follow.create({
+      followee_id: 4,
+      follower_id: 3
+    })
+
+  fi = Follow.create({
+      followee_id: 6,
+      follower_id: 3
+    })
+
+  fj = Follow.create({
+      followee_id: 1,
+      follower_id: 4
+    })
+
+  fk = Follow.create({
+      followee_id: 7,
+      follower_id: 4
+    })
+
+  fl = Follow.create({
+      followee_id: 1,
+      follower_id: 5
+    })
+
+  fm = Follow.create({
+      followee_id: 2,
+      follower_id: 5
+    })
+
+  fn = Follow.create({
+      followee_id: 1,
+      follower_id: 6
+    })
+
+  fo = Follow.create({
+      followee_id: 3,
+      follower_id: 6
+    })
+
+  fp = Follow.create({
+      followee_id: 7,
+      follower_id: 6
+    })
+
+  fq = Follow.create({
+      followee_id: 1,
+      follower_id: 7
+    })
+
+  fr = Follow.create({
+      followee_id: 2,
+      follower_id: 7
+    })
+
+
 pa = Post.create({
     title: "Colors in SF",
     description: "Join me at the lounge in the city!",

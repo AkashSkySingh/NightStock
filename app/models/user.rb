@@ -5,6 +5,24 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  # For reference and review: https://medium.com/@jbmilgrom/active-record-many-to-many-self-join-table-e0992c27c1e#.e11si360k
+
+  has_many :followers,
+  through: :follower_follows,
+  source: :follower
+
+has_many :follower_follows,
+  foreign_key: :followee_id,
+  class_name: :Follow
+
+has_many :followees,
+  through: :followee_follows,
+  source: :followee
+
+has_many :followee_follows,
+  foreign_key: :follower_id,
+  class_name: :Follow
+
   after_initialize :ensure_session_token
 
   attr_reader :password

@@ -536,10 +536,33 @@ footer ul li p {
   background-color: rgba(0,0,0,.7)
 }
 
-
 .user-desc {
   font-size: 20px;
   margin: 5px auto;
+}
+
+.follow-button {
+  font-family: 'Satisfy', cursive;
+  color: white;
+  border: 0 solid white;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.follow {
+  background-color: inherit;
+}
+
+.follow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.unfollow {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.unfollow:hover {
+  background-color: inherit;
 }
 
 .user-descrip {

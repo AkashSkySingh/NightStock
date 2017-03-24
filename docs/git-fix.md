@@ -24,6 +24,7 @@ Run this command in the Terminal from within your repo's root directory,
   alias bi='bundle install'
   alias gaa='git add -A .'
   alias gb='git branch'
+  alias gc='git clone'
   alias gco='git checkout'
   alias gl='git log'
   alias gcm='git commit -m'

@@ -15,6 +15,8 @@ class UserShow extends React.Component {
   constructor(props){
     super(props);
     this.masonry = this.masonry.bind(this);
+    this.followButton = this.followButton.bind(this);
+    this.followSwitch = this.followSwitch.bind(this);
   }
 
   componentDidMount(){
@@ -52,6 +54,31 @@ class UserShow extends React.Component {
     }
   }
 
+  followSwitch(){
+    if (this.props.currentUser.followees.includes(this.props.userDetail.id)){
+      this.props.unfollow(this.props.userDetail.id);
+    } else {
+      this.props.follow(this.props.userDetail.id);
+    }
+  }
+
+  followButton(){
+
+    if (this.props.currentUser){
+      if (this.props.currentUser.id !== this.props.userDetail.id){
+        if (this.props.currentUser.followees.includes(this.props.userDetail.id)){
+          return (
+            <button className="follow-button user-desc unfollow" onClick={this.followSwitch}>Unfollow!</button>
+          );
+        } else {
+          return (
+            <button className="follow-button user-desc follow" onClick={this.followSwitch}>Follow!</button>
+          );
+        }
+      }
+    }
+  }
+
   render(){
     let userDetail = this.props.userDetail;
 
@@ -72,11 +99,12 @@ class UserShow extends React.Component {
                   <h3 className="user-desc">
                     {`Posts: ${userDetail.posts.length}`}
                   </h3>
+                  {this.followButton()}
                   <h3 className="user-desc">
-                    {`Following: 2`}
+                    {`Following: ${userDetail.followees.length}`}
                   </h3>
                   <h3 className="user-desc">
-                    {`Followers: 7`}
+                    {`Followers: ${userDetail.followers.length}`}
                   </h3>
                 </div>
               </div>

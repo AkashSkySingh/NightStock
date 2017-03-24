@@ -2,11 +2,9 @@ class Api::PostsController < ApplicationController
   def index
 
     # if signed_in?
-    @posts = Post.all.reverse
-    # else
-    #   @posts = Post.all.select {|post| [1, 7, 8, 10, 11, 12, 14, 16, 17, 20].include?(post.id)}
-    # end
-    #
+    @posts = []
+    current_user.followees.each { |user| @posts += user.posts }
+    @posts = @posts.sort {|x, y| y.id <=> x.id}
     render :index
   end
 
