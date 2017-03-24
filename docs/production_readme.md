@@ -29,6 +29,20 @@ NightStock is truly a single-page, React-based web application, partly due to th
       username: "poster's username"
     }
   },
+  postDetail: {
+    0: {
+      description: "post description",
+      id: "post's id",
+      image_url: "post.com/post",
+      location: "post, post, usa",
+      title: "post title",
+      user: {
+        user_id: "poster's id",
+        user_image_url: "poster.com/poster",
+        username: "poster's username"
+      }
+    }
+  },
   posts: {
     0: {
       description: "post description",
@@ -94,6 +108,7 @@ NightStock is truly a single-page, React-based web application, partly due to th
   }
 }
 ```
+
 
 ### User Authorization
 Throughout the site, the session controller will manage the User's authorization only allowing certain actions if there is a current user. Signing in, up, and out of the site is allowed by an modal interaction. Post sign-in, a user will always have access to signing out of the site from the navbar. Errors in either signing in or up will be displayed at the bottom of the modal.

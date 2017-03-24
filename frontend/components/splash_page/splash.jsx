@@ -49,17 +49,6 @@ class Splash extends React.Component {
               <h1 className="homefeed-un">
                 {`${this.props.currentUser.username}'s Homefeed`}
               </h1>
-              <div className="homefeed-show-details">
-                <h3 className="homefeed-desc">
-                  {`Posts: ${this.props.currentUser.posts.length}`}
-                </h3>
-                <h3 className="homefeed-desc homefeed-desc-mid">
-                  {`Following: 2`}
-                </h3>
-                <h3 className="homefeed-desc">
-                  {`Followers: 7`}
-                </h3>
-              </div>
             </div>
           </div>
           </div>

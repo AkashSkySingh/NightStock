@@ -69,6 +69,7 @@ class PostForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    debugger;
     Object.keys(this.state).map(
       (key) => {
         if (this.state[key] === ""){
@@ -76,7 +77,6 @@ class PostForm extends React.Component {
         }
       }
     );
-
     this.props.createPost({
       title: this.state.title,
       description: this.state.description,

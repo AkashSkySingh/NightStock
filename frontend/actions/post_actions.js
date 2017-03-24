@@ -38,12 +38,12 @@ export const updatePost = post => dispatch => {
 
 export const createPost = post => dispatch => {
   return PostApiUtil.createPost(post)
-    .then(createdPost => dispatch(receivePost(createdPost)),
+    .then((createdPost => dispatch(receivePost(createdPost)).then(hashHistory.push(`/posts/${createdPost.id}`))),
     err => dispatch(receiveErrors(err.responseJSON)));
+
 };
 
 
-// hashHistory.push(`/posts/${createdPost.id}`);
 
 export const deletePost = id => dispatch => {
   return PostApiUtil.deletePost(id).then(post => dispatch(removePost(post))).then(hashHistory.push("/"));
