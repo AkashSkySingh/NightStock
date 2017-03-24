@@ -251,7 +251,7 @@ fc = Follow.create({
   # fz = Follow.create({
   #     followee_id: ,
   #     follower_id:
-    })
+    # })
 
 
 pa = Post.create({
@@ -321,7 +321,7 @@ ph = Post.create({
     location: "Chicago, Michigan, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489789163/f6847c936e68db93caa02fa075ea4ba4_wxmb8n.jpg",
     user_id: 5
-  })
+  });
 
 
 pi = Post.create({
@@ -330,7 +330,7 @@ pi = Post.create({
     location: "Paris, France",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489896529/wallpaper-2865990_upfaza.jpg",
     user_id: 2
-  })
+  });
 
 
 pj = Post.create({
@@ -339,7 +339,7 @@ pj = Post.create({
     location: "Paris, France",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/s--gmXW2tSu--/c_scale,h_1080/v1489896564/eiffel_tower_paris_night_lights_france_bridge_river_hdr_36870_3840x2160_btmltm.jpg",
     user_id: 2
-  })
+  });
 
 
 pk = Post.create({
@@ -348,7 +348,7 @@ pk = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489896833/san-francisco-nightlife_cmdo8o.png",
     user_id: 1
-  })
+  });
 
 
 pl = Post.create({
@@ -357,7 +357,7 @@ pl = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489896932/15674892061_6c1a569151_k-1024x512_rirzve.jpg",
     user_id: 1
-  })
+  });
 
 
 pm = Post.create({
@@ -366,7 +366,7 @@ pm = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489897025/palace-of-fine-arts_opnadl.jpg",
     user_id: 1
-  })
+  });
 
 
 pn = Post.create({
@@ -375,7 +375,7 @@ pn = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/s--DR7HtImC--/c_scale,h_1080/v1489897140/san-francisco-streets-at-night-wallpaper-3_eo6tvd.jpg",
     user_id: 1
-  })
+  });
 
 
 po = Post.create({
@@ -384,7 +384,7 @@ po = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489897221/tram-sanfrancisco-night-street_yfp732.jpg",
     user_id: 1
-  })
+  });
 
 
 pp = Post.create({
@@ -393,7 +393,7 @@ pp = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489897354/iStock_000031901936_Small_nufxgx.jpg",
     user_id: 3
-  })
+  });
 
 
 pq = Post.create({
@@ -402,7 +402,7 @@ pq = Post.create({
     location: "San Francisco, California, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/v1489897615/maxresdefault_c0wzot.jpg",
     user_id: 3
-  })
+  });
 
 
 pr = Post.create({
@@ -411,7 +411,7 @@ pr = Post.create({
     location: "Chicago, Michigan, USA",
     image_url: "https://res.cloudinary.com/nightstock/image/upload/c_limit,h_1080/v1489898039/Chicago_River_night_3_nonc1v.jpg",
     user_id: 5
-  })
+  });
 
 
 ps = Post.create({
@@ -432,110 +432,126 @@ pt = Post.create({
   })
 
 
-# pu = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
+pu = Post.create({
+    title: "Mission Peaks is something else",
+    description: "Starlight gazing",
+    location: "Fremont, California, USA",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--Z4BZGaYw--/v1490380964/dftvvvwaj0zidojnxzy3.jpg",
+    user_id: 1
+  })
+
 #
-#
-# px = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-#
-# py = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-#
-# pz = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-#
-# paa = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pab = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pac = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pad = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pae = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# paf = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pag = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pah = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
-#
-# pai = Post.create({
-#     title: "",
-#     description: "",
-#     location: "",
-#     image_url: "",
-#     user_id:
-#   })
+px = Post.create({
+    title: "Christmas Lights",
+    description: "Fun in the Town Square",
+    location: "Berlin, Germany",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--QHVPfPKg--/v1490394987/khpg6qavhpzwm70dh7us.jpg",
+    user_id: 6
+  })
+
+
+py = Post.create({
+    title: "Camping under the Stars",
+    description: "Great Lakes!",
+    location: "Great Lakes",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--ilaTmhsb--/v1490394988/jwa92mvgnaxgsfxr8uj8.jpg",
+    user_id: 5
+  })
+
+
+pz = Post.create({
+    title: "Pond Wonder",
+    description: "Walking with my Parents",
+    location: "London, United Kingdom",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--GJoy6_ig--/v1490394990/ky3mxng4xq3y4y68z6ma.jpg",
+    user_id: 6
+  })
+
+
+paa = Post.create({
+    title: "Dine and Site",
+    description: "Dinner by the Pier",
+    location: "Great Lakes, Michigan",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--lt6N5LLe--/v1490394993/pscd9ps7hkcmvwmxduhl.jpg",
+    user_id: 5
+  })
+
+pab = Post.create({
+    title: "Starlight in Big Basin",
+    description: "Sites at Night",
+    location: "Big Basin, California, USA",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--IzA7INva--/v1490394995/ndem7ahrgkdpl1juyfia.jpg",
+    user_id: 3
+  })
+
+pac = Post.create({
+    title: "Flames in night",
+    description: "Prolonged photography!",
+    location: "San Francisco, California, USA",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--AQ1YJBaQ--/v1490394997/ea3ohvfrbx6pkxp07h2z.jpg",
+    user_id: 3
+  })
+
+pad = Post.create({
+    title: "Campfire and stories",
+    description: "Travels and camps",
+    location: "Nice, France",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--uDc_sTU1--/v1490395000/svs7q88lfozc5rjo21ed.jpg",
+    user_id: 2
+  })
+
+pae = Post.create({
+    title: "Desert Nights",
+    description: "Nomad travels",
+    location: "Itanigar, Bangladesh",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--n7NObWjx--/v1490395002/ejfybx40zhir2mlxsabw.jpg",
+    user_id: 7
+  })
+
+paf = Post.create({
+    title: "Icon of Lights",
+    description: "The one and only tower of lights",
+    location: "Paris, France",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--zHWPC-bo--/v1490395003/hcirjan6th5kwpdezyfh.jpg",
+    user_id: 2
+  })
+
+pag = Post.create({
+    title: "Quick snap at night",
+    description: "Hilltop sights",
+    location: "Kymera, China",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--ORYn77yq--/v1490395006/pd6mgg1ebuzqp2auujwh.jpg",
+    user_id: 4
+  })
+
+pah = Post.create({
+    title: "Remembrance",
+    description: "Night weddings!",
+    location: "San Jose, California, USA",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--TTVnglJG--/v1490395008/cbhvredelvtyi52taijy.jpg",
+    user_id: 3
+  })
+
+pai = Post.create({
+    title: "Travels at Night",
+    description: "Traveling is wonderous",
+    location: "Desert Flats, South Africa",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--QBiNvJ33--/v1490395009/cqqaptjvabntgrtwj7r1.jpg",
+    user_id: 7
+  })
+
+pai = Post.create({
+    title: "Travels at Night",
+    description: "Traveling is wonderous",
+    location: "Desert Flats, South Africa",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--QBiNvJ33--/v1490395009/cqqaptjvabntgrtwj7r1.jpg",
+    user_id: 7
+  })
+
+paj = Post.create({
+    title: "Night Life",
+    description: "The sites are wonderous",
+    location: "Chicago, Michigan",
+    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--esGOJowz--/v1490395011/mklk4t2ndfvoav0uxadq.jpg",
+    user_id: 5
+  })
