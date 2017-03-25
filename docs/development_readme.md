@@ -38,11 +38,11 @@ NightStock is a web application inspired by 500px built using Ruby on Rails and 
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: /wireframes
-[components]: /component-hierarchy.md
-[sample-state]: /sample-state.md
-[api-endpoints]: /api-endpoints.md
-[schema]: /schema.md
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
 ## Implementation Timeline
 
