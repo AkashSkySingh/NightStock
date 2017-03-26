@@ -4,7 +4,7 @@
 - [NightStock: Github][github]
 - [NightStock: Trello Production Board][trello]
 
-[heroku]: http://nightstock.herokuapp.com/#/
+[heroku]: http://www.nightstock.net/#/
 [github]: https://github.com/AkashSkySingh/NightStock
 [trello]: https://trello.com/b/3U9nmBBR/full-stack-project-nightstock
 
