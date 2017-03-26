@@ -2,7 +2,7 @@
 
 [NightStock live][heroku]
 
-[heroku]: http://nightstock.herokuapp.com/#/
+[heroku]: http://www.nightstock.net/#/
 
 NightStock is a full-stack web application inspired by 500px.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend via ES6.
 
