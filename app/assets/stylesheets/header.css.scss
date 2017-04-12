@@ -1,0 +1,72 @@
+// Header related CSS
+
+header {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .9);
+  top: 0;
+  position: fixed;
+  height: 55px;
+  min-width: 800px;
+}
+
+.anchors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-family: 'Satisfy', cursive;
+  text-shadow: 0 0 30px white;
+}
+
+.anchors:hover {
+  text-shadow: 0 0 10px white;
+
+}
+
+.Auth-NSLogo {
+  width: 50px;
+}
+
+div header div hgroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sign {
+  height: 30px;
+  min-height: 30px;
+  background-color: inherit;
+  border: 0;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+  transform: skewX(-20deg);
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.sign-right-b {
+  margin-right: 40px;
+}
+
+.sign:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.header-current-user-img {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: gray;
+  background-size: cover;
+}

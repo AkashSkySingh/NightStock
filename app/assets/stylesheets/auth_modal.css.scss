@@ -1,0 +1,44 @@
+// Sign-in/up modal related CSS
+
+.sign-form-title {
+  margin-bottom: 0;
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+}
+
+.errors-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.sign-form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sign-form input:not([type=submit]) {
+  width: 140px;
+  height: 20px;
+}
+
+.errors-box {
+  min-height: 45px;
+}
+
+.sign-form-b {
+  color: white;
+  background-color: inherit;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 50%;
+  font-size: 13px;
+}
+
+.sign-form-b:hover {
+  background-color: rgba(255,255,255,0.5);
+}

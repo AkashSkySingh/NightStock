@@ -1,0 +1,31 @@
+// Footer related CSS
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+  height: 60px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 800px;
+}
+
+footer ul li h4 {
+  margin: 2px 0 2px 0;
+  font-size: 16px;
+}
+
+footer ul li p {
+  margin: 2px 0 2px 0;
+  font-size: 14px;
+}

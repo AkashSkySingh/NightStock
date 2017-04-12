@@ -1,0 +1,107 @@
+// Post show related CSS
+
+.post-show {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 800px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+
+.post-show-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 260px;
+  padding: 0 20px;
+  margin: auto;
+  max-width: 500px;
+}
+
+.post-show-user-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+  min-width: 100px;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.post-show-user-by {
+  font-family: 'Satisfy', cursive;
+  padding-right: 20px;
+}
+
+.post-show-user-img {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: gray;
+  background-size: cover;
+}
+
+.post-show-user-un {
+  padding-left: 20px;
+  font-family: 'Satisfy', cursive;
+
+}
+
+.post-show-title {
+  font-family: 'Satisfy', cursive;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.post-show-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+
+.post-show-buttonloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 0 auto;
+  min-width: 256px;
+}
+
+.post-show-loc {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  padding-bottom: 10px;
+  margin: auto;
+}
+
+.post-show-b {
+  color: white;
+  background-color: inherit;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 80px;
+  font-size: 13px;
+  margin: 20px 10px 20px;
+}
+
+.post-show-img {
+  vertical-align: middle;
+  min-width: 470px;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}

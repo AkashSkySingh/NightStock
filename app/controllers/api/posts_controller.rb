@@ -4,7 +4,8 @@ class Api::PostsController < ApplicationController
     # if signed_in?
     @posts = []
     current_user.followees.each { |user| @posts += user.posts }
-    @posts = @posts.sort {|x, y| y.id <=> x.id}
+    @posts += current_user.posts
+    @posts = @posts.sort { |x, y| y.id <=> x.id }
     render :index
   end
 

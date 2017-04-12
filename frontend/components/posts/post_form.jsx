@@ -84,7 +84,7 @@ class PostForm extends React.Component {
       user_id: this.state.user_id
     });
     this.props.clearErrors();
-
+    this.props.closeModal();
   }
 
   onImageDrop(files) {

@@ -1,0 +1,72 @@
+// Post form modal related CSS
+
+.post {
+  height: 30px;
+  min-height: 30px;
+  background-color: inherit;
+  border: 0;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+  transform: skewX(-20deg);
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.post:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.post-form-title {
+  margin-bottom: 0;
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+}
+
+.post-form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-form input:not([type=submit]) {
+  width: 140px;
+  height: 20px;
+}
+
+.post-form textarea {
+  width: 140px;
+  max-width: 140px;
+  height: 60px;
+  max-height: 60px;
+}
+
+.post-form-b {
+  color: white;
+  background-color: inherit;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 50%;
+  font-size: 16px;
+}
+
+.post-form-b:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+
+.DZone {
+  min-width: 250px;
+  min-height: 60px;
+  border: 1px dashed white;
+  text-align: center;
+  height: 200px;
+}
+
+.post-form-preview-image {
+  max-width:100%;
+  max-height:100%;
+  height: auto;
+  width:auto;
+}

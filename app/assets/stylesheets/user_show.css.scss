@@ -1,0 +1,87 @@
+// User page related CSS
+
+.user-show {
+  font-family: 'Satisfy', cursive;
+}
+
+.user-imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 50px;
+  height: 500px;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.user-up {
+  width: 100%;
+  max-width: 175px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: gray;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.user-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-un {
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  margin: 30px auto 0px auto;
+  background-color: rgba(0,0,0,.7)
+
+}
+
+.user-show-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 0 auto 50px auto;
+  background-color: rgba(0,0,0,.7)
+}
+
+.user-desc {
+  font-size: 20px;
+  margin: 5px auto;
+}
+
+.follow-button {
+  font-family: 'Satisfy', cursive;
+  color: white;
+  border: 0 solid white;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.follow {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.follow:hover {
+  background-color: inherit;
+}
+
+.unfollow {
+  background-color: inherit;
+}
+
+.unfollow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.user-descrip {
+  width: 100%;
+  text-align: center;
+  margin: 0px auto 10px auto;
+  background-color: rgba(0,0,0,.7)
+}

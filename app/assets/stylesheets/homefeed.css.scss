@@ -1,0 +1,55 @@
+// Homefeed related CSS
+.homefeed-show {
+  font-family: 'Satisfy', cursive;
+}
+
+.homefeed-imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  height: 400px;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.homefeed-up {
+  width: 100%;
+  max-width: 175px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: gray;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.homefeed-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homefeed-un {
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  margin: 30px auto 10px auto;
+  background-color: rgba(0,0,0,.7)
+
+}
+
+.homefeed-show-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 0 auto 50px auto;
+  background-color: rgba(0,0,0,.7)
+}
+
+.homefeed-desc {
+  font-size: 20px;
+  margin: 5px auto;
+}

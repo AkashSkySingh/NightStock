@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import './header.css.scss';
+@import './footer.css.scss';
+@import './auth_modal.css.scss';
+@import './post_form.css.scss';
+@import './post_show.css.scss';
+@import './splash.css.scss';
+@import './masonry.css.scss';
+@import './user_show.css.scss';
+@import './homefeed.css.scss';
+
+
+
+// Total Reset with all related tags
+
+header, a, nav, body, div, form, label, hgroup, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+#root {
+  position: relative;
+  min-width: 800px;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+
+}
+
+.middle {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+// Site background related CSS
+
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(http://res.cloudinary.com/nightstock/image/upload/v1489772984/bxcz1zmodxunyztminxj.gif) #191919 no-repeat center center fixed;
+    background-size: contain;
+  }
+  #bgvid {
+    display: none;
+  }
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(http://res.cloudinary.com/nightstock/image/upload/v1489772984/bxcz1zmodxunyztminxj.gif) no-repeat;
+  background-size: cover;
+}
