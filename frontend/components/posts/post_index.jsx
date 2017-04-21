@@ -29,14 +29,16 @@ class PostIndex extends React.Component {
       );
     });
     return (
-      <Masonry
-        className={'my-gallery-class'}
-        elementType={'ul'}
-        options={masonryOptions}
-        disableImagesLoaded={false}
-        updateOnEachImageLoad={false}>
-        {childElements}
-      </Masonry>
+      <div className="masonry-div">
+        <Masonry
+          className={'my-gallery-class'}
+          elementType={'ul'}
+          options={masonryOptions}
+          disableImagesLoaded={false}
+          updateOnEachImageLoad={false}>
+          {childElements}
+        </Masonry>
+      </div>
     );
   }
 }

@@ -10,7 +10,7 @@ header {
   background-color: rgba(0, 0, 0, .9);
   top: 0;
   position: fixed;
-  height: 55px;
+  height: 80px;
   min-width: 800px;
 }
 
@@ -18,21 +18,30 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 12px;
   color: white;
   text-decoration: none;
   padding: 10px;
   font-family: 'Satisfy', cursive;
-  text-shadow: 0 0 30px white;
+  text-shadow: 0 0 2px white;
+  margin-left: 20px;
 }
 
 .anchors:hover {
-  text-shadow: 0 0 10px white;
-
+  text-shadow: 0 0 30px white;
 }
 
-.Auth-NSLogo {
-  width: 50px;
+.header-current-username {
+  text-shadow: 0 0 0px white;
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+}
+
+.auth-nslogo {
+  width: 60px;
+}
+
+.website-title {
+  font-size: 30px;
 }
 
 div header div hgroup {
@@ -42,31 +51,32 @@ div header div hgroup {
 }
 
 .sign {
-  height: 30px;
-  min-height: 30px;
+  height: 35px;
+  min-height: 35px;
   background-color: inherit;
   border: 0;
-  border-left: solid 1px white;
-  border-right: solid 1px white;
-  transform: skewX(-20deg);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Muli', sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 2px;
+  width: 90px;
 }
 
 .sign-right-b {
-  margin-right: 40px;
+  margin-right: 30px;
 }
 
 .sign:hover {
-  background-color: rgba(255,255,255,0.5);
+  border: 2px solid white;
+  border-radius: 15px;
 }
 
 .header-current-user-img {
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 60px;
+  max-height: 60px;
   border-radius: 25px;
   border: 2px solid white;
   background-color: gray;
   background-size: cover;
+  margin-right: 0px;
 }

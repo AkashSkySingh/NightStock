@@ -16,7 +16,7 @@ const customStyles = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(0, 0, 0, 0.5)'
+    backgroundColor   : 'rgba(0, 0, 0, 0.9)'
   },
   content : {
     top                   : '50%',
@@ -25,9 +25,10 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : 'auto',
     transform             : 'translate(-50%, -50%)',
-    borderRadius          : '7px',
+    borderRadius          : '0px',
     color                 : 'white',
-    backgroundColor       : 'rgba(0, 0, 0, 0.9)',
+    backgroundColor       : 'rgba(0, 0, 0, 1)',
+    borderStyle           : 'groove',
     width                 : '250px',
     height                : '600px',
     display               : 'flex',
@@ -35,8 +36,7 @@ const customStyles = {
     textAlign             : 'center',
     padding               : '20px',
     fontFamily            : 'Lato, san-serif',
-    border                : '2px solid rgb(204, 204, 204)',
-    boxShadow             : '0 0px 100px 60px rgba(0, 0, 0, 1)'
+    border                : '4px solid rgb(204, 204, 204)'
   }
 };
 
@@ -83,8 +83,7 @@ class PostForm extends React.Component {
       location: this.state.location,
       user_id: this.state.user_id
     });
-    this.props.clearErrors();
-    this.props.closeModal();
+    this.closeModal();
   }
 
   onImageDrop(files) {
@@ -113,7 +112,6 @@ class PostForm extends React.Component {
       modalOpen: true
     });
     this.props.clearErrors();
-
   }
 
   closeModal(){
@@ -125,13 +123,12 @@ class PostForm extends React.Component {
       uploadCloudinaryUrl: ""
     });
     this.props.clearErrors();
-
   }
 
   dropZone() {
     if (this.state.uploadCloudinaryUrl !== ""){
       return (
-        <div className="DZone" >
+        <div className="DZone-preview">
           <img className="post-form-preview-image" src={this.state.uploadCloudinaryUrl} />
         </div>
       );
@@ -206,8 +203,10 @@ class PostForm extends React.Component {
               <br/>
               {this.dropZone()}
               <br/>
-              <input className="post-form-b" type="submit" value="Create Post" />
-              <button className="post-form-b" onClick={this.closeModal}>Cancel</button>
+              <div className="post-form-buttons">
+                <input className="post-form-b" type="submit" value="Create Post" />
+                <button className="post-form-b" onClick={this.closeModal}>Cancel</button>
+              </div>
             </div>
           </form>
 

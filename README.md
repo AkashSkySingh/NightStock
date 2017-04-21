@@ -4,7 +4,7 @@
 
 [heroku]: http://www.nightstock.net/#/
 
-NightStock is a full-stack web application inspired by 500px.  It utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend via ES6.
+NightStock is a full-stack web application inspired by 500px. NightStock utilizes Ruby on Rails on the back-end, a PostgreSQL database, and React.js with a Redux architectural framework on the front-end via ES6.
 
 ![image of Root page](/docs/wireframes/RootPage.png)
 
@@ -12,7 +12,7 @@ NightStock is a full-stack web application inspired by 500px.  It utilizes Ruby 
 ## Features & Implementation
 
 ### React Wonder
-NightStock is truly a single-page, React-based web application, partly due to the way it passes <tt> state and store </tt> with an abundance of information to continually feed the front-end components. Additionally, the combination of front-end and backend provides an effective, but easy user interface without errors.
+NightStock is truly a single-page, React web application, partly due to the way it passes <tt> state and store </tt> with an abundance of information to continually feed the front-end components. Additionally, the combination of front-end and back-end provides an effective, but easy user interface without errors.
 
 ```js
 {
@@ -113,26 +113,26 @@ NightStock is truly a single-page, React-based web application, partly due to th
 
 
 ### User Authorization
-Throughout the site, the session controller will manage the User's authorization only allowing certain actions if there is a current user. Signing in, up, and out of the site is allowed by an modal interaction. Post sign-in, a user will always have access to signing out of the site from the navbar. Errors in either signing in or up will be displayed at the bottom of the modal.
+Throughout the site, the session controller will manage the User's authorization only allowing certain actions if a user is signed in. Signing in, up, and out of the site is allowed by an modal interaction. Post sign-in, a user will always have access to signing out of the site from the nav-bar. Errors in either signing in, or signing up will be displayed at the bottom of the modal.
 
 ![image of Signin Form](/docs/wireframes/Signin.png)
 ![image of Signup Form](/docs/wireframes/Signup.png)
 
 
 ### Profile Page and Follows
-NightStock's profile page serves as a user hub. Customization is reliant on the backend passing information such as <tt> current_user posts, description, interaction, cover_photo, user_img, and other </tt> necessary information. This makes each page different than the last. Primarily using the same views, different cuts of information is typically used in the user show pages. From the sample state, the backend provides information via a route to the selected user. From there, the front end uses the userDetail portion of the sample state to render the proper information regarding the selected user. Each page presents the various information about the selected user, along with their created posts organized via a Masonry table from most recent to their primary post. A user's page is the effective inlet for a user to follow or unfollow a viewed user.
+NightStock's profile page serves as a user hub. Customization is reliant on the back-end passing information such as <tt> current_user posts, description, interaction, cover_photo, user_img, and other </tt> necessary information. This makes each page different than the last. Primarily using the same views, different cuts of information is typically used in the user show pages. From the sample state, the back-end provides information via a route to the selected user. From there, the front-end uses the userDetail portion of the sample state to render the proper information regarding the selected user. Each page presents the various information about the selected user, along with their created posts organized via a Masonry table from most recent to their primary post. A user's page is an effective inlet for a user to follow or unfollow a viewed user.
 
 ![image of Profile Page](/docs/wireframes/ProfilePage.png)
 
 
 ### Post CRUD (Create/Read/Update/Delete)
-Post interaction is simplistic, yet effective. <tt>Posts can be created via a modal available on any part of the page from the navigation bar. An event click handler will allow for the current user to generate a post, while using the CloudinaryAPI to host the image.</tt> Errors for each form will be displayed on the bottom of the modal.
+Post interaction is simplistic, yet effective. Posts can be created via a modal available on any part of the page from the navigation bar. An event click handler will allow for the current user to generate a post, while using the <tt>CloudinaryAPI</tt> to host the image.
 
 ![image of Post Create Form](/docs/wireframes/Createpost.png)
 ![image of Post Create Form](/docs/wireframes/Updatepost.png)
 
 
-The posts' themselves will be rendered on an individual show page, or via a masonry table for the homefeed. Only the post creator can edit or delete the post via dispatched methods attached to the properties being passed to the respective component. The validations in the backend will prevent a user from creating or updating a post with a null <tt>title, location, or image_url</tt> in the case of the image url being sent from the CloudinaryAPI once an image is uploaded to the form via the React-DropZone component.
+The posts' themselves will be rendered on an individual show page, or via a Masonry table for the home-feed. Only the post creator can edit or delete the post via dispatched methods attached to the properties being passed to the respective component. The validations in the back-end will prevent a user from creating or updating a post with a null <tt>title, location, or image_url</tt> in the case of the image url being sent from the CloudinaryAPI once an image is uploaded to the form via the React-DropZone component.
 
 ![image of Post](/docs/wireframes/PostShow.png)
 
@@ -145,7 +145,7 @@ The Home Feed page and its relative containers serve as the backdrop for cross-u
 
 ## Future Directions for the Project
 
-In addition to the features already implemented, I plan to continue work on this project.  The next steps for NightStock are outlined below. Again, the backend ties together various sources of information to seamlessly generate content as a user continues to browse.
+In addition to the features already implemented, I plan to continue work on this project.  The next steps for NightStock are outlined below. Again, the back-end ties together various sources of information to seamlessly generate content as a user continues to browse.
 
 ### Discover new content
 

@@ -22,7 +22,7 @@ class Greeting extends React.Component {
         <Link className="anchors" to={`/users/${currentUser.id}`} >
           <img className="header-current-user-img" src={this.props.currentUser.user_image_url} alt="Current User Image"/>
           &nbsp; &nbsp; &nbsp;
-          <h2> Hi, {currentUser.username}</h2>
+          <h2 className="header-current-username"> Hi, {currentUser.username}</h2>
         </Link>
         <PostFormContainer />
         <button className="sign sign-right-b" onClick={signout}>Sign Out</button>

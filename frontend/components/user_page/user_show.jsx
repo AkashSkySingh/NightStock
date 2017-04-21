@@ -56,9 +56,13 @@ class UserShow extends React.Component {
 
   followSwitch(){
     if (this.props.currentUser.followees.includes(this.props.userDetail.id)){
+      let ufb = document.getElementById('unfollow');
       this.props.unfollow(this.props.userDetail.id);
+      ufb.blur();
     } else {
+      let fb = document.getElementById('follow');
       this.props.follow(this.props.userDetail.id);
+      fb.blur();
     }
   }
 
@@ -68,11 +72,11 @@ class UserShow extends React.Component {
       if (this.props.currentUser.id !== this.props.userDetail.id){
         if (this.props.currentUser.followees.includes(this.props.userDetail.id)){
           return (
-            <button className="follow-button user-desc unfollow" onClick={this.followSwitch}>Unfollow!</button>
+            <button id="unfollow" className="follow-button user-desc unfollow" onClick={this.followSwitch}>Unfollow!</button>
           );
         } else {
           return (
-            <button className="follow-button user-desc follow" onClick={this.followSwitch}>Follow!</button>
+            <button id="follow" className="follow-button user-desc follow" onClick={this.followSwitch}>Follow!</button>
           );
         }
       }

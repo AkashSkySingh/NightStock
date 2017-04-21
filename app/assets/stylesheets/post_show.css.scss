@@ -33,7 +33,7 @@
 }
 
 .post-show-user-by {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Muli', sans-serif;
   padding-right: 20px;
 }
 
@@ -95,6 +95,11 @@
   width: 80px;
   font-size: 13px;
   margin: 20px 10px 20px;
+  border: 1px solid white;
+}
+
+.post-show-b:hover {
+  border: 2px solid white;
 }
 
 .post-show-img {

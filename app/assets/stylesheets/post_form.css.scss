@@ -1,25 +1,25 @@
 // Post form modal related CSS
 
 .post {
-  height: 30px;
-  min-height: 30px;
+  height: 35px;
+  min-height: 35px;
   background-color: inherit;
   border: 0;
-  border-left: solid 1px white;
-  border-right: solid 1px white;
-  transform: skewX(-20deg);
-  font-family: 'Lato', sans-serif;
+  font-family: 'Muli', sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
+  margin: 2px;
+  width: 110px;
 }
 
 .post:hover {
-  background-color: rgba(255,255,255,0.5);
+  border: 2px solid white;
+  border-radius: 15px;
 }
 
 .post-form-title {
   margin-bottom: 0;
-  font-family: 'Satisfy', cursive;
+  font-family: 'Muli', sans-serif;
   font-size: 25px;
 }
 
@@ -41,19 +41,27 @@
   max-height: 60px;
 }
 
+.post-form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .post-form-b {
   color: white;
   background-color: inherit;
   font-family: 'Lato', sans-serif;
-  border-radius: 5px;
   cursor: pointer;
   height: 30px;
-  width: 50%;
   font-size: 16px;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 40%;
 }
 
 .post-form-b:hover {
-  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  border: 2px solid white;
 }
 
 .DZone {

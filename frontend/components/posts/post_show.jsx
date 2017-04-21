@@ -10,7 +10,7 @@ const customStyles = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(0, 0, 0, 0.5)'
+    backgroundColor   : 'rgba(0, 0, 0, 0.9)'
   },
   content : {
     top                   : '50%',
@@ -19,9 +19,10 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : 'auto',
     transform             : 'translate(-50%, -50%)',
-    borderRadius          : '7px',
+    borderRadius          : '0px',
     color                 : 'white',
-    backgroundColor       : 'rgba(0, 0, 0, 0.9)',
+    backgroundColor       : 'rgba(0, 0, 0, 1)',
+    borderStyle           : 'groove',
     width                 : '250px',
     height                : '400px',
     display               : 'flex',
@@ -29,8 +30,7 @@ const customStyles = {
     textAlign             : 'center',
     padding               : '20px',
     fontFamily            : 'Lato, san-serif',
-    border                : '2px solid rgb(204, 204, 204)',
-    boxShadow             : '0 0px 100px 60px rgba(0, 0, 0, 1)'
+    border                : '4px solid rgb(204, 204, 204)'
   }
 };
 
@@ -76,6 +76,8 @@ class PostShow extends React.Component {
   }
 
   openModal() {
+    let eb = document.getElementById("edit-post");
+    eb.blur();
     this.setState({
       modalOpen: true
     });
@@ -92,7 +94,6 @@ class PostShow extends React.Component {
   creatorDetails(){
     if (this.props.post.user){
       return (
-
           <Link className="post-show-user-details" to={`users/${this.props.post.user.user_id}`}>
             <h2 className="post-show-user-by">By:</h2>
             <img src={this.props.post.user.user_image_url} className="post-show-user-img"/>
@@ -121,7 +122,7 @@ class PostShow extends React.Component {
         if (this.props.post.user.user_id === this.props.currentUser.id){
           return (
             <div className="post-show-buttons">
-              <button className="post-show-b" onClick={()=>this.openModal()}>Edit Post</button>
+              <button id="edit-post" className="post-show-b" onClick={()=>this.openModal()}>Edit Post</button>
             </div>
           );
         }
@@ -192,8 +193,10 @@ class PostShow extends React.Component {
             <br/>
 
               <br/>
-              <input className="post-form-b" type="submit" value="Update Post" />
-              <button className="post-form-b"  onClick={()=>this.props.deletesPost(post.id)}>Delete Post</button>
+              <div className="post-form-buttons">
+                <input className="post-form-b" type="submit" value="Update Post" />
+                <button className="post-form-b"  onClick={()=>this.props.deletesPost(post.id)}>Delete Post</button>
+              </div>
             </form>
           <br />
           <div className="errors-box">

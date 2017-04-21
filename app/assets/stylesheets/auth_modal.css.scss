@@ -1,8 +1,8 @@
 // Sign-in/up modal related CSS
 
 .sign-form-title {
-  margin-bottom: 0;
-  font-family: 'Satisfy', cursive;
+  margin-bottom: 20px;
+  font-family: 'Muli', sans-serif;
   font-size: 25px;
 }
 
@@ -28,6 +28,12 @@
   min-height: 45px;
 }
 
+.sign-form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .sign-form-b {
   color: white;
   background-color: inherit;
@@ -35,10 +41,12 @@
   border-radius: 5px;
   cursor: pointer;
   height: 30px;
-  width: 50%;
   font-size: 13px;
+  border: 1px solid white;
+  width: 40%;
 }
 
 .sign-form-b:hover {
-  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  border: 2px solid white;
 }

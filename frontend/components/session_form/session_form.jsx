@@ -9,7 +9,7 @@ const customStyles = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(0, 0, 0, 0.5)'
+    backgroundColor   : 'rgba(0, 0, 0, 0.9)'
   },
   content : {
     top                   : '50%',
@@ -18,19 +18,19 @@ const customStyles = {
     bottom                : 'auto',
     marginRight           : 'auto',
     transform             : 'translate(-50%, -50%)',
-    borderRadius          : '7px',
+    borderRadius          : '0px',
     color                 : 'white',
-    backgroundColor       : 'rgba(0, 0, 0, 0.95)',
-    width                 : '225px',
-    height                : '300px',
+    backgroundColor       : 'rgba(0, 0, 0, 1)',
+    borderStyle           : 'groove',
+    width                 : '250px',
+    height                : '380px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
     justifyContent        : 'space-between',
     padding               : '20px',
     fontFamily            : 'Lato, san-serif',
-    border                : '2px solid rgb(204, 204, 204)',
-    boxShadow             : '0 0px 100px 60px rgba(0, 0, 1, 1)'
+    border                : '4px solid rgb(204, 204, 204)'
   }
 };
 
@@ -163,12 +163,16 @@ class SessionForm extends React.Component {
 									value={this.state.password}
 									onChange={this.update("password")}/>
 							</label>
-							<br/>
-
-							<input className="sign-form-b" type="submit" value="Submit" />
-              <button className="sign-form-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
+							<br />
+							<br />
+              <div className="sign-form-buttons">
+                <input className="sign-form-b" type="submit" value="Submit" />
+                <button className="sign-form-b" onClick={(e) => this.loadDemoUser(e)}>Demo</button>
+              </div>
 						</div>
 					</form>
+
+          <br />
 
           <div>
             {this.navLink()}

@@ -1,6 +1,6 @@
 // Homefeed related CSS
 .homefeed-show {
-  font-family: 'Satisfy', cursive;
+  min-width: 800px;
 }
 
 .homefeed-imgs {
@@ -30,12 +30,12 @@
 }
 
 .homefeed-un {
-  font-size: 40px;
+  font-family: 'Muli', sans-serif;
+  font-size: 36px;
   width: 100%;
   text-align: center;
   margin: 30px auto 10px auto;
-  background-color: rgba(0,0,0,.7)
-
+  background-color: rgba(0,0,0,.6)
 }
 
 .homefeed-show-details {

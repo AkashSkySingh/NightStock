@@ -4,8 +4,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.9);
-  height: 60px;
+  background-color: rgba(0,0,0,0.8);
+  height: 50px;
 }
 
 footer ul {
@@ -23,6 +23,7 @@ footer ul {
 footer ul li h4 {
   margin: 2px 0 2px 0;
   font-size: 16px;
+  font-family: 'Muli', sans-serif;
 }
 
 footer ul li p {
