@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { hashHistory, Link, withRouter } from 'react-router';
 import Modal from 'react-modal';
 
 
@@ -43,6 +43,8 @@ class PostShow extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.creatorDetails = this.creatorDetails.bind(this);
     this.creatorButtons = this.creatorButtons.bind(this);
+    this.moveForward = this.moveForward.bind(this);
+    this.moveBackward = this.moveBackward.bind(this);
     this.state = {
       modalOpen: false,
       modalType: 'edit',
@@ -52,6 +54,7 @@ class PostShow extends React.Component {
       user_id: this.props.post.user_id,
       image_url: this.props.post.image_url
     };
+    console.log(props);
   }
 
   componentDidMount() {
@@ -72,7 +75,9 @@ class PostShow extends React.Component {
     e.preventDefault();
     this.props.updatesPost(this.state);
     this.props.clearErrors();
-    this.closeModal();
+    if (this.props.errors === null) {
+      this.closeModal();
+    }
   }
 
   openModal() {
@@ -130,79 +135,127 @@ class PostShow extends React.Component {
     }
   }
 
+  moveForward() {
+    let post = this.props.post;
+    let posts = this.props.userDetail.posts;
+    let index = null;
+    for (let i = 0; i < posts.length; i++) {
+      if (post.id === posts[i].id) {
+        index = i;
+      }
+    }
+    if (index !== posts.length - 1) {
+      hashHistory.push(`/posts/${posts[index + 1].id}`)
+    } else {
+      hashHistory.push(`/posts/${posts[0].id}`)
+    }
+  }
+
+  moveBackward() {
+    let { carList, index, lastIndex } = this.cars();
+
+    if (index) {
+
+      if (parseInt(index) !== 0) {
+        hashHistory.push(`/cars/${carList[parseInt(index) - 1].id}`)
+      } else {
+        hashHistory.push(`/cars/${carList[lastIndex].id}`)
+      }
+
+    } else {
+      if (this.props.id !== 1) {
+        hashHistory.push(`/cars/${this.props.id - 1}`);
+      } else {
+        hashHistory.push(`/cars/${2360}`);
+      }
+    }
+  }
+
 
   render () {
     const post = this.props.post;
 
     return (
       <div className="middle">
-        <div className="post-show">
-          <img className="post-show-img" src={post.image_url} />
-          <div className="post-show-details">
-            <h1 className="post-show-title">
-              {post.title}
-            </h1>
-            {this.creatorDetails()}
-            <div className="post-show-buttonloc">
-              {this.creatorButtons()}
-              <h4 className="post-show-loc">
-                Photo taken in:
-                <br />
-                {post.location}
-              </h4>
+
+        <div className="post-show-wrap">
+          <div className="arrow" onClick={this.moveBackward}>
+            <img className="arrow-img" src="https://res.cloudinary.com/nightstock/image/upload/s--zQgvR_x5--/a_180/v1493781285/arrow-right-white_hubelu.png" />
+          </div>
+
+          <div className="post-show">
+            <img className="post-show-img" src={post.image_url} />
+            <div className="post-show-details">
+              <h1 className="post-show-title">
+                {post.title}
+              </h1>
+              {this.creatorDetails()}
+              <div className="post-show-buttonloc">
+                {this.creatorButtons()}
+                <h4 className="post-show-loc">
+                  Photo taken in:
+                  <br />
+                  {post.location}
+                </h4>
+              </div>
+              <h3 className="post-show-desc">
+                {post.description}
+              </h3>
             </div>
-            <h3 className="post-show-desc">
-              {post.description}
+          </div>
+          <Modal
+            contentLabel="Modal"
+            isOpen={this.state.modalOpen}
+            onRequestClose={this.closeModal}
+            style={customStyles}>
+
+            <h3 className="post-form-title">
+              Update Post
             </h3>
+
+            <form className="post-form" onSubmit={this.handleSubmit}>
+
+              <br />
+              <label>Title:
+                <input
+                  type="text"
+                  value={this.state.title}
+                  onChange={this.update('title')} />
+              </label>
+              <br />
+
+              <label>Location:
+                <input
+                  type="text"
+                  value={this.state.location}
+                  onChange={this.update('location')} />
+              </label>
+              <br/>
+
+              <label>Details:
+                <textarea
+                  value={this.state.description}
+                  onChange={this.update('description')} />
+              </label>
+              <br/>
+
+                <br/>
+                <div className="post-form-buttons">
+                  <input className="post-form-b" type="submit" value="Update Post" />
+                  <button className="post-form-b"  onClick={()=>this.props.deletesPost(post.id)}>Delete Post</button>
+                </div>
+              </form>
+            <br />
+            <div className="errors-box">
+              {this.renderErrors()}
+            </div>
+          </Modal>
+
+          <div className="arrow" onClick={this.moveForward}>
+            <img className="arrow-img" src="https://res.cloudinary.com/nightstock/image/upload/s--JqZfSSuS--/v1493781285/arrow-right-white_hubelu.png" />
           </div>
         </div>
-        <Modal
-          contentLabel="Modal"
-          isOpen={this.state.modalOpen}
-          onRequestClose={this.closeModal}
-          style={customStyles}>
 
-          <h3 className="post-form-title">
-            Update Post
-          </h3>
-
-          <form className="post-form" onSubmit={this.handleSubmit}>
-
-            <br />
-            <label>Title:
-              <input
-                type="text"
-                value={this.state.title}
-                onChange={this.update('title')} />
-            </label>
-            <br />
-
-            <label>Location:
-              <input
-                type="text"
-                value={this.state.location}
-                onChange={this.update('location')} />
-            </label>
-            <br/>
-
-            <label>Details:
-              <textarea
-                value={this.state.description}
-                onChange={this.update('description')} />
-            </label>
-            <br/>
-
-              <br/>
-              <div className="post-form-buttons">
-                <input className="post-form-b" type="submit" value="Update Post" />
-                <button className="post-form-b"  onClick={()=>this.props.deletesPost(post.id)}>Delete Post</button>
-              </div>
-            </form>
-          <br />
-          <div className="errors-box">
-            {this.renderErrors()}
-          </div>
-        </Modal>
       </div>
     );
   }

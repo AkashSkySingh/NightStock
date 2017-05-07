@@ -540,14 +540,6 @@ pai = Post.create({
     user_id: 7
   })
 
-pai = Post.create({
-    title: "Travels at Night",
-    description: "Traveling is wonderous",
-    location: "Desert Flats, South Africa",
-    image_url: "http://res.cloudinary.com/nightstock/image/upload/s--QBiNvJ33--/v1490395009/cqqaptjvabntgrtwj7r1.jpg",
-    user_id: 7
-  })
-
 paj = Post.create({
     title: "Night Life",
     description: "The sites are wonderous",

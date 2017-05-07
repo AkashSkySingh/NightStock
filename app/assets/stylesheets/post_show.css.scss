@@ -1,5 +1,10 @@
 // Post show related CSS
 
+.post-show-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
 .post-show {
   display: flex;
   flex-direction: row;
@@ -12,6 +17,22 @@
   padding-bottom: 125px;
 }
 
+.arrow {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto 30px;
+  display: block;
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.arrow-img {
+  width: 100px;
+  height: 300px;
+}
 
 .post-show-details {
   display: flex;
