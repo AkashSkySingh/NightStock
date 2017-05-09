@@ -74,13 +74,15 @@ class PostShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updatesPost(this.state);
-    debugger;
-    if (this.props.errors) {
 
-    } else {
-      this.props.clearErrors();
-      this.closeModal();
-    }
+    // Error  prone due to unknown setTimeOut function
+    // setTimeOut(function(){
+    //   if (!this.props.errors) {
+    //     this.props.clearErrors();
+    //     this.closeModal();
+    //   }
+    // }, 2000);
+
   }
 
   openModal() {
@@ -182,6 +184,7 @@ class PostShow extends React.Component {
       <div className="middle">
 
         <div className="post-show-wrap">
+
           <div className="arrow" onClick={this.moveBackward}>
             <img className="arrow-img" src="https://res.cloudinary.com/nightstock/image/upload/s--zQgvR_x5--/a_180/v1493781285/arrow-right-white_hubelu.png" />
           </div>
@@ -206,6 +209,7 @@ class PostShow extends React.Component {
               </h3>
             </div>
           </div>
+
           <Modal
             contentLabel="Modal"
             isOpen={this.state.modalOpen}
@@ -257,6 +261,7 @@ class PostShow extends React.Component {
           <div className="arrow" onClick={this.moveForward}>
             <img className="arrow-img" src="https://res.cloudinary.com/nightstock/image/upload/s--JqZfSSuS--/v1493781285/arrow-right-white_hubelu.png" />
           </div>
+
         </div>
 
       </div>
