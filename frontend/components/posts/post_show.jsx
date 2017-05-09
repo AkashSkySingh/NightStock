@@ -24,7 +24,7 @@ const customStyles = {
     backgroundColor       : 'rgba(0, 0, 0, 1)',
     borderStyle           : 'groove',
     width                 : '250px',
-    height                : '400px',
+    height                : '430px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
@@ -74,8 +74,11 @@ class PostShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updatesPost(this.state);
-    this.props.clearErrors();
-    if (this.props.errors === null) {
+    debugger;
+    if (this.props.errors) {
+
+    } else {
+      this.props.clearErrors();
       this.closeModal();
     }
   }

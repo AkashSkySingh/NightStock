@@ -23,7 +23,7 @@ const customStyles = {
     backgroundColor       : 'rgba(0, 0, 0, 1)',
     borderStyle           : 'groove',
     width                 : '250px',
-    height                : '380px',
+    height                : '400px',
     display               : 'flex',
     flexDirection         : 'column',
     textAlign             : 'center',
