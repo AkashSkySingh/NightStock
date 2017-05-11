@@ -74,14 +74,8 @@ class PostShow extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updatesPost(this.state);
+    this.props.clearErrors();
 
-    // Error  prone due to unknown setTimeOut function
-    // setTimeOut(function(){
-    //   if (!this.props.errors) {
-    //     this.props.clearErrors();
-    //     this.closeModal();
-    //   }
-    // }, 2000);
 
   }
 
@@ -140,8 +134,12 @@ class PostShow extends React.Component {
     }
   }
 
+  // Issue with the overall unmounting and remounting of following images not happening, need to rework how page renders show, or attribute better lifecycle method.
+  // Grab the updated and better conditional willreceive props from carsforme repo.
+
   moveForward() {
     let post = this.props.post;
+    debugger;
     let posts = this.props.userDetail.posts;
     let index = null;
     for (let i = 0; i < posts.length; i++) {
