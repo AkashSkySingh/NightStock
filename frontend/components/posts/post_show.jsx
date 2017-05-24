@@ -54,7 +54,6 @@ class PostShow extends React.Component {
       user_id: this.props.post.user_id,
       image_url: this.props.post.image_url
     };
-    console.log(props);
   }
 
   componentDidMount() {
@@ -62,7 +61,10 @@ class PostShow extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState(newProps.post);
+    debugger;
+  if (this.props.id !== newProps.id) {
+    this.props.fetchesPost(newProps.postId);
+    }
   }
 
   update(field) {
@@ -136,11 +138,11 @@ class PostShow extends React.Component {
 
   // Issue with the overall unmounting and remounting of following images not happening, need to rework how page renders show, or attribute better lifecycle method.
   // Grab the updated and better conditional willreceive props from carsforme repo.
+  // unmounting and remounting continually work however the index isnt updated. add conditionals checking if there is posts in props/state, and if there is a userDetail. from there, check the attributed areas and cycle through them. just assign them to post so you dont have to recopy code from section to section. may have to access state to get access to other locations
 
   moveForward() {
-    let post = this.props.post;
-    debugger;
-    let posts = this.props.userDetail.posts;
+    const post = this.props.post;
+    const posts = this.props.userDetail.posts;
     let index = null;
     for (let i = 0; i < posts.length; i++) {
       if (post.id === posts[i].id) {
