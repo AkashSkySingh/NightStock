@@ -60,6 +60,8 @@ class PostShow extends React.Component {
     this.props.fetchesPost(this.props.params.postId);
   }
 
+
+// Mountings issue is the error of pulling the proper state items, may need to conditional recieves inside contructor to get the proper posts lined up for future use.
   componentWillReceiveProps(newProps) {
     debugger;
   if (this.props.id !== newProps.id) {
