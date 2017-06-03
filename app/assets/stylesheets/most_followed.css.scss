@@ -1,0 +1,38 @@
+// Popular Users CSS
+
+// Remember to implement follow buttons on user image as well as hover  effects for user name and  location. Potentially provide filters for users to narrow down individuals near their own location or by preference.
+
+.masonry-div {
+
+  min-width: 975px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.my-gallery-class {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  padding-bottom: 80px;
+  padding-top: 10px;
+}
+
+.masonry-post {
+  max-width: 300px;
+  padding: 5px;
+}
+
+.masonry-post-image {
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  box-shadow: 0 0 1px 1px;
+}
+
+.masonry-post-image:hover {
+  box-shadow: 0 0 2px 2px;
+}
