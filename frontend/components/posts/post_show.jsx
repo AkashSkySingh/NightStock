@@ -63,9 +63,8 @@ class PostShow extends React.Component {
 
 // Mountings issue is the error of pulling the proper state items, may need to conditional recieves inside contructor to get the proper posts lined up for future use.
   componentWillReceiveProps(newProps) {
-    debugger;
-  if (this.props.id !== newProps.id) {
-    this.props.fetchesPost(newProps.postId);
+    if (this.props.id !== newProps.id) {
+      this.props.fetchesPost(newProps.postId);
     }
   }
 
@@ -146,6 +145,11 @@ class PostShow extends React.Component {
     const post = this.props.post;
     const posts = this.props.userDetail.posts;
     let index = null;
+    // conditional to reroute user to splash page if next post unavailable
+    if (!posts) {
+      hashHistory.push(`/`);
+    }
+
     for (let i = 0; i < posts.length; i++) {
       if (post.id === posts[i].id) {
         index = i;
@@ -158,24 +162,31 @@ class PostShow extends React.Component {
     }
   }
 
+// moveBackward function does not work yet, needs to be implemented like above
   moveBackward() {
-    let { carList, index, lastIndex } = this.cars();
+    const post = this.props.post;
+    const posts = this.props.userDetail.posts;
+    let index = null;
 
-    if (index) {
-
-      if (parseInt(index) !== 0) {
-        hashHistory.push(`/cars/${carList[parseInt(index) - 1].id}`)
-      } else {
-        hashHistory.push(`/cars/${carList[lastIndex].id}`)
-      }
-
-    } else {
-      if (this.props.id !== 1) {
-        hashHistory.push(`/cars/${this.props.id - 1}`);
-      } else {
-        hashHistory.push(`/cars/${2360}`);
-      }
+    if (!posts) {
+      hashHistory.push(`/`);
     }
+
+    // if (index) {
+    //
+    //   if (parseInt(index) !== 0) {
+    //     hashHistory.push(`/cars/${carList[parseInt(index) - 1].id}`)
+    //   } else {
+    //     hashHistory.push(`/cars/${carList[lastIndex].id}`)
+    //   }
+    //
+    // } else {
+    //   if (this.props.id !== 1) {
+    //     hashHistory.push(`/cars/${this.props.id - 1}`);
+    //   } else {
+    //     hashHistory.push(`/cars/${2360}`);
+    //   }
+    // }
   }
 
 
