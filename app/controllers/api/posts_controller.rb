@@ -1,16 +1,17 @@
 class Api::PostsController < ApplicationController
   def index
-
     # if signed_in?
-    @posts = []
-    current_user.followees.each { |user| @posts += user.posts }
-    @posts += current_user.posts
+    @posts = Post.all
     @posts = @posts.sort { |x, y| y.id <=> x.id }
     render :index
   end
 
+# Redo the initial splash page to reflect view from #recent json extension so index views all posts originally
   def recent
-    @posts = Post.all
+    @posts = []
+    current_user.followees.each { |user| @posts += user.posts }
+    @posts += current_user.posts
+    @posts = @posts.sort { |x, y| y.id <=> x.id }
     render :recent
   end
 
