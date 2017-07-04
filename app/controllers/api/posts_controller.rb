@@ -9,6 +9,8 @@ class Api::PostsController < ApplicationController
   end
 
 # Redo the initial splash page to reflect view from #recent json extension so index views all posts originally
+
+# make sure the route works properly due to it showcasing the same splash page for user posts
   # def recent
   #   @posts = []
   #   current_user.followees.each { |user| @posts += user.posts }

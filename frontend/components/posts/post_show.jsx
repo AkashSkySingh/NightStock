@@ -150,6 +150,7 @@ class PostShow extends React.Component {
       hashHistory.push(`/`);
     }
 
+    //  The conditional below is the error. The function has to loop through the posts and find the correct ID related to showcased post, and then decide to move forward/backward by function/arrow related action
     for (let i = 0; i < posts.length; i++) {
       if (post.id === posts[i].id) {
         index = i;
@@ -171,6 +172,12 @@ class PostShow extends React.Component {
     if (!posts) {
       hashHistory.push(`/`);
     }
+
+    // for (let i = 0; i < posts.length; i++) {
+    //   if (post.id === [posts[i]]) {
+    //
+    //   }
+    // }
 
     // if (index) {
     //
